@@ -1,0 +1,5 @@
+Submitited subject: voice846
+Submitted session: 1
+Command:
+singularity run -B /om2/scratch/Wed/rfbrito/dicom -B /om2/user/rfbrito/voice_depression/bids_conversion -B /om2/scratch/Wed/rfbrito/bids:/out /om2/user/rfbrito/containers/imaging/heudiconv_latest.sif -d /om2/scratch/Wed/rfbrito/dicom/{subject}/session001*/dicom/Trio*/*.dcm -o /out -f /om2/user/rfbrito/voice_depression/bids_conversion/heuristic.py -c dcm2niix -s voice846 -ss 1 -b --minmeta -g accession_number
+DONE

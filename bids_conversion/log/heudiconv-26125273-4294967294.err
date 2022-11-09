@@ -1,0 +1,791 @@
+INFO: Running heudiconv version 0.11.3+d20220512 latest 0.11.4
+INFO: Need to process 1 study sessions
+INFO: PROCESSING STARTS: {'subject': 'voice893', 'outdir': '/out/', 'session': '1'}
+INFO: Processing 5269 dicoms
+INFO: Analyzing 5269 dicoms
+INFO: Generated sequence info for 50 accession numbers with 5269 entries total
+INFO: Doing conversion using dcm2niix
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold (300 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+WARNING: A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixhou3lijb/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:36:34.818008:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:36:34.818008:Found 300 DICOM file(s)
+INFO: stdout 2022-10-07T18:36:34.818008:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+INFO: stdout 2022-10-07T18:36:34.818008:Convert 300 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold_heudiconv079 (108x108x65x300)
+INFO: stdout 2022-10-07T18:37:05.774388:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold_heudiconv079.nii"
+INFO: stdout 2022-10-07T18:37:05.774388:Conversion required 35.235112 seconds (4.014436 for core code).
+INFO: [Node] Finished "convert", elapsed time 35.293351s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi (260 DICOMs) -> /out/sub-voice893/ses-1/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixdb_axxc_/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:06.490618:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:06.490618:Found 260 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:06.490618:Convert 260 DICOM as /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi_heudiconv864 (108x108x65x4)
+INFO: stdout 2022-10-07T18:37:06.951201:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi_heudiconv864.nii"
+INFO: stdout 2022-10-07T18:37:06.951201:Conversion required 0.689454 seconds (0.147975 for core code).
+INFO: [Node] Finished "convert", elapsed time 0.760965s.
+WARNING: Failed to find task field in /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.json.
+INFO: Post-treating /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.json file
+INFO: Converting /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi (260 DICOMs) -> /out/sub-voice893/ses-1/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixeyza4otn/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:07.522942:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:07.522942:Found 260 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:07.522942:Convert 260 DICOM as /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi_heudiconv691 (108x108x65x4)
+INFO: stdout 2022-10-07T18:37:07.992012:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi_heudiconv691.nii"
+INFO: stdout 2022-10-07T18:37:07.992012:Conversion required 0.687746 seconds (0.149976 for core code).
+INFO: [Node] Finished "convert", elapsed time 0.746161s.
+WARNING: Failed to find task field in /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.json.
+INFO: Post-treating /out/sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.json file
+INFO: Converting /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi (72 DICOMs) -> /out/sub-voice893/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix1_25cdca/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:09.064566:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:09.064566:Found 72 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:09.064566:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+INFO: stdout 2022-10-07T18:37:09.064566:Convert 72 DICOM as /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi_heudiconv883 (120x120x66x72)
+INFO: stdout 2022-10-07T18:37:18.614857:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi_heudiconv883.nii"
+INFO: stdout 2022-10-07T18:37:18.614857:Conversion required 10.400797 seconds (0.376954 for core code).
+INFO: [Node] Finished "convert", elapsed time 10.464587s.
+WARNING: Failed to find task field in /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.json.
+INFO: Post-treating /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.json file
+INFO: Converting /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi (7 DICOMs) -> /out/sub-voice893/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixfmjiw200/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:18.919231:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:18.919231:Found 7 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:18.919231:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+INFO: stdout 2022-10-07T18:37:18.919231:Convert 7 DICOM as /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi_heudiconv539 (120x120x66x7)
+INFO: stdout 2022-10-07T18:37:19.897450:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi_heudiconv539.nii"
+INFO: stdout 2022-10-07T18:37:19.897450:Conversion required 1.133934 seconds (0.044649 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.189835s.
+WARNING: Failed to find task field in /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.json.
+INFO: Post-treating /out/sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.json file
+INFO: Converting /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w (176 DICOMs) -> /out/sub-voice893/ses-1/anat . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix_tknzlg8/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:20.402539:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:20.402539:Found 176 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:20.402539:Convert 176 DICOM as /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w_heudiconv675 (256x256x176x1)
+INFO: stdout 2022-10-07T18:37:22.072551:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w_heudiconv675.nii"
+INFO: stdout 2022-10-07T18:37:22.072551:Conversion required 1.869585 seconds (0.207209 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.947216s.
+WARNING: Failed to find task field in /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.json.
+INFO: Post-treating /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.json file
+INFO: Converting /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w (176 DICOMs) -> /out/sub-voice893/ses-1/anat . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixwj23v4_v/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:22.489713:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:22.489713:Found 176 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:22.489713:Convert 176 DICOM as /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w_heudiconv296 (256x256x176x1)
+INFO: stdout 2022-10-07T18:37:24.093373:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w_heudiconv296.nii"
+INFO: stdout 2022-10-07T18:37:24.093373:Conversion required 1.766633 seconds (0.198580 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.8248419999999999s.
+WARNING: Failed to find task field in /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.json.
+INFO: Post-treating /out/sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold (207 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix1lw1zr4i/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:24.855753:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:24.855753:Found 207 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:24.855753:Warning: Slice timing appears corrupted (range 0..3137.5, TR=1640 ms)
+INFO: stdout 2022-10-07T18:37:24.855753:Convert 207 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold_heudiconv768 (72x72x45x207)
+INFO: stdout 2022-10-07T18:37:31.560712:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold_heudiconv768.nii"
+INFO: stdout 2022-10-07T18:37:31.560712:Conversion required 7.127184 seconds (0.361399 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.189299s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold (207 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niiximynhz5b/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:32.591513:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:32.591513:Found 207 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:32.591513:Warning: Slice timing appears corrupted (range 0..3137.5, TR=1640 ms)
+INFO: stdout 2022-10-07T18:37:32.591513:Convert 207 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold_heudiconv873 (72x72x45x207)
+INFO: stdout 2022-10-07T18:37:39.320186:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold_heudiconv873.nii"
+INFO: stdout 2022-10-07T18:37:39.320186:Conversion required 7.385130 seconds (0.382903 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.448754s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold (64 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixxh3gfi54/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:40.030585:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:40.030585:Found 64 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:40.030585:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T18:37:40.030585:Convert 64 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold_heudiconv038 (108x108x65x64)
+INFO: stdout 2022-10-07T18:37:46.723745:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold_heudiconv038.nii"
+INFO: stdout 2022-10-07T18:37:46.723745:Conversion required 7.119708 seconds (0.339535 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.183004s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold (64 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixy5yo9dus/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:47.494002:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:47.494002:Found 64 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:47.494002:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T18:37:47.494002:Convert 64 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold_heudiconv635 (108x108x65x64)
+INFO: stdout 2022-10-07T18:37:54.168601:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold_heudiconv635.nii"
+INFO: stdout 2022-10-07T18:37:54.168601:Conversion required 7.180994 seconds (0.376865 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.25129s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold (42 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixu2xkj82s/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:54.713069:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:54.713069:Found 42 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:54.713069:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T18:37:54.713069:Convert 42 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold_heudiconv171 (108x108x65x42)
+INFO: stdout 2022-10-07T18:37:59.167891:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold_heudiconv171.nii"
+INFO: stdout 2022-10-07T18:37:59.167891:Conversion required 4.744580 seconds (0.211881 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.80656s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold (42 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixp32vw5ex/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:37:59.696047:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:37:59.696047:Found 42 DICOM file(s)
+INFO: stdout 2022-10-07T18:37:59.696047:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T18:37:59.696047:Convert 42 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold_heudiconv225 (108x108x65x42)
+INFO: stdout 2022-10-07T18:38:04.073960:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold_heudiconv225.nii"
+INFO: stdout 2022-10-07T18:38:04.073960:Conversion required 4.710171 seconds (0.243209 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.766934s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold (42 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixrrpqzgy1/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:04.566957:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:04.566957:Found 42 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:04.566957:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T18:38:04.566957:Convert 42 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold_heudiconv244 (108x108x65x42)
+INFO: stdout 2022-10-07T18:38:08.911196:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold_heudiconv244.nii"
+INFO: stdout 2022-10-07T18:38:08.911196:Conversion required 4.642819 seconds (0.223523 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.706804s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold (99 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix94t3j_ql/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:09.994023:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:09.994023:Found 99 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:09.994023:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-07T18:38:09.994023:Convert 99 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold_heudiconv378 (108x108x65x99)
+INFO: stdout 2022-10-07T18:38:20.128137:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold_heudiconv378.nii"
+INFO: stdout 2022-10-07T18:38:20.128137:Conversion required 10.864627 seconds (0.529010 for core code).
+INFO: [Node] Finished "convert", elapsed time 10.936724s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold (99 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixdu010mc8/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:21.146842:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:21.146842:Found 99 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:21.146842:Warning: Slice timing appears corrupted (range 0..5357.5, TR=2000 ms)
+INFO: stdout 2022-10-07T18:38:21.146842:Convert 99 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold_heudiconv513 (108x108x65x99)
+INFO: stdout 2022-10-07T18:38:31.353719:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold_heudiconv513.nii"
+INFO: stdout 2022-10-07T18:38:31.353719:Conversion required 10.897364 seconds (0.544995 for core code).
+INFO: [Node] Finished "convert", elapsed time 10.972437s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold (48 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixfl1f1dze/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:31.985705:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:31.985705:Found 48 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:31.985705:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T18:38:31.985705:Convert 48 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold_heudiconv832 (108x108x65x48)
+INFO: stdout 2022-10-07T18:38:37.001114:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold_heudiconv832.nii"
+INFO: stdout 2022-10-07T18:38:37.001114:Conversion required 5.316188 seconds (0.210787 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.382771s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold (48 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix0gfbegf5/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:37.671250:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:37.671250:Found 48 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:37.671250:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T18:38:37.671250:Convert 48 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold_heudiconv496 (108x108x65x48)
+INFO: stdout 2022-10-07T18:38:42.746634:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold_heudiconv496.nii"
+INFO: stdout 2022-10-07T18:38:42.746634:Conversion required 5.465209 seconds (0.269649 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.534053s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold (60 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix5s1bk8rd/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:43.493271:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:43.493271:Found 60 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:43.493271:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T18:38:43.493271:Convert 60 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold_heudiconv934 (108x108x65x60)
+INFO: stdout 2022-10-07T18:38:49.719020:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold_heudiconv934.nii"
+INFO: stdout 2022-10-07T18:38:49.719020:Conversion required 6.648784 seconds (0.307402 for core code).
+INFO: [Node] Finished "convert", elapsed time 6.706811s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold (60 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixzph2ejgf/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:50.299868:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:50.299868:Found 60 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:50.299868:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T18:38:50.299868:Convert 60 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold_heudiconv995 (108x108x65x60)
+INFO: stdout 2022-10-07T18:38:56.571823:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold_heudiconv995.nii"
+INFO: stdout 2022-10-07T18:38:56.571823:Conversion required 6.669050 seconds (0.293188 for core code).
+INFO: [Node] Finished "convert", elapsed time 6.728117s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold (101 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix6mro0338/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:38:57.489207:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:38:57.489207:Found 101 DICOM file(s)
+INFO: stdout 2022-10-07T18:38:57.489207:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-07T18:38:57.489207:Convert 101 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold_heudiconv798 (108x108x65x101)
+INFO: stdout 2022-10-07T18:39:08.107836:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold_heudiconv798.nii"
+INFO: stdout 2022-10-07T18:39:08.107836:Conversion required 11.299280 seconds (0.556777 for core code).
+INFO: [Node] Finished "convert", elapsed time 11.361732s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold (101 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixnxtr17a6/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:39:09.010985:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:39:09.010985:Found 101 DICOM file(s)
+INFO: stdout 2022-10-07T18:39:09.010985:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-07T18:39:09.010985:Convert 101 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold_heudiconv267 (108x108x65x101)
+INFO: stdout 2022-10-07T18:39:19.567341:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold_heudiconv267.nii"
+INFO: stdout 2022-10-07T18:39:19.567341:Conversion required 11.181177 seconds (0.502711 for core code).
+INFO: [Node] Finished "convert", elapsed time 11.244946s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.json file
+INFO: Converting /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold (138 DICOMs) -> /out/sub-voice893/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix49fr8qbv/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:39:20.608183:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:39:20.608183:Found 138 DICOM file(s)
+INFO: stdout 2022-10-07T18:39:20.608183:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+INFO: stdout 2022-10-07T18:39:20.608183:Convert 138 DICOM as /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold_heudiconv245 (108x108x65x138)
+INFO: stdout 2022-10-07T18:39:34.949913:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold_heudiconv245.nii"
+INFO: stdout 2022-10-07T18:39:34.949913:Conversion required 15.093927 seconds (0.636529 for core code).
+INFO: [Node] Finished "convert", elapsed time 15.150492s.
+INFO: Post-treating /out/sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.json file
+INFO: Populating template files under /out/
+INFO: PROCESSING DONE: {'subject': 'voice893', 'outdir': '/out/', 'session': '1'}
+INFO: Total: starting
+INFO: 
+INFO: Total: processed result for /out
+INFO: Total: done
+INFO: Total: starting
+INFO: 
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out/.heudiconv
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+[WARNING] Received an exception FileNotInRepositoryError([Errno 1] ['git', '-c', 'diff.ignoreSubmodules=none', 'commit', '-m', '[DATALAD] Recorded changes', '--', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice854/ses-1/sub-voice854_ses-1_scans.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_T2w.json', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_T2w.nii.gz', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_run-1_T1w.json', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_run-1_T1w.nii.gz', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.bval', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.bvec', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.json', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.nii.gz', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.bval', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.bvec', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.json', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.nii.gz', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.nii', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_events.tsv', 'sub-voice886/ses-1/sub-voice886_ses-1_scans.tsv', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_T2w.json', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_T2w.nii.gz', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_run-1_T1w.json', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_run-1_T1w.nii.gz', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.bval', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.bvec', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.json', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.nii.gz', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.bval', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.bvec', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.json', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.nii.gz', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_events.tsv', 'sub-voice889/ses-1/sub-voice889_ses-1_scans.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.nii', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.nii.gz', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_T2w.json', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_T2w.nii.gz', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_run-1_T1w.json', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_run-1_T1w.nii.gz', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.bval', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.bvec', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.json', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.nii.gz', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.bval', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.bvec', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.json', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.nii.gz', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_events.tsv', 'sub-voice891/ses-1/sub-voice891_ses-1_scans.tsv', 'participants.tsv', 'sub-voice867/ses-1/sub-voice867_ses-1_scans.tsv', '.gitmodules', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bval', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bvec', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.json', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii.gz', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold.json', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_events.tsv', 'sub-voice849/ses-1/sub-voice849_ses-1_scans.tsv', 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.json', 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.nii.gz', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.bval', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.bvec', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.json', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.nii.gz', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.bval', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.bvec', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.json', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.nii.gz', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_bold.json', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_events.tsv', 'sub-voice857/ses-1/sub-voice857_ses-1_scans.tsv', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_T2w.json', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_T2w.nii.gz', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_run-1_T1w.json', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_run-1_T1w.nii.gz', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.bval', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.bvec', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.json', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.nii.gz', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.bval', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.bvec', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.json', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.nii.gz', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_bold.json', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_events.tsv', 'sub-voice859/ses-1/sub-voice859_ses-1_scans.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_events.tsv', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_T2w.json', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_T2w.nii.gz', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_run-1_T1w.json', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_run-1_T1w.nii.gz', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.bval', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.bvec', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.json', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.nii.gz', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.bval', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.bvec', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.json', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.nii.gz', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-AP_run-2_epi.json', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-PA_run-1_epi.json', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_events.tsv', 'sub-voice889/ses-2/sub-voice889_ses-2_scans.tsv', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.json', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.nii.gz', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.json', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.nii.gz', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.bval', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.bvec', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.json', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.nii.gz', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.bval', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.bvec', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.json', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.nii.gz', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_events.tsv', 'sub-voice893/ses-1/sub-voice893_ses-1_scans.tsv', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.json', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii.gz', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bval', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bvec', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.json', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii.gz', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_bold.json', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_events.tsv', 'sub-voice897/ses-1/sub-voice897_ses-1_scans.tsv', '.heudiconv']: File(s) unknown to git: "error: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bval' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bvec' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bval' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bvec' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii.gz' did not match any file(s) known to git"). Canceling not-yet running jobs and waiting for completion of running. You can force earlier forceful exit by Ctrl-C. 
+WARNING: Received an exception FileNotInRepositoryError([Errno 1] ['git', '-c', 'diff.ignoreSubmodules=none', 'commit', '-m', '[DATALAD] Recorded changes', '--', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice854/ses-1/sub-voice854_ses-1_scans.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_T2w.json', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_T2w.nii.gz', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_run-1_T1w.json', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_run-1_T1w.nii.gz', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.bval', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.bvec', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.json', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.nii.gz', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.bval', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.bvec', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.json', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.nii.gz', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.nii', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_events.tsv', 'sub-voice886/ses-1/sub-voice886_ses-1_scans.tsv', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_T2w.json', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_T2w.nii.gz', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_run-1_T1w.json', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_run-1_T1w.nii.gz', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.bval', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.bvec', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.json', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.nii.gz', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.bval', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.bvec', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.json', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.nii.gz', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_events.tsv', 'sub-voice889/ses-1/sub-voice889_ses-1_scans.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.nii', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.nii.gz', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_T2w.json', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_T2w.nii.gz', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_run-1_T1w.json', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_run-1_T1w.nii.gz', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.bval', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.bvec', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.json', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.nii.gz', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.bval', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.bvec', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.json', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.nii.gz', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_events.tsv', 'sub-voice891/ses-1/sub-voice891_ses-1_scans.tsv', 'participants.tsv', 'sub-voice867/ses-1/sub-voice867_ses-1_scans.tsv', '.gitmodules', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bval', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bvec', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.json', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii.gz', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold.json', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_events.tsv', 'sub-voice849/ses-1/sub-voice849_ses-1_scans.tsv', 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.json', 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.nii.gz', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.bval', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.bvec', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.json', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.nii.gz', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.bval', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.bvec', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.json', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.nii.gz', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_bold.json', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_events.tsv', 'sub-voice857/ses-1/sub-voice857_ses-1_scans.tsv', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_T2w.json', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_T2w.nii.gz', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_run-1_T1w.json', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_run-1_T1w.nii.gz', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.bval', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.bvec', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.json', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.nii.gz', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.bval', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.bvec', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.json', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.nii.gz', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_bold.json', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_events.tsv', 'sub-voice859/ses-1/sub-voice859_ses-1_scans.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_events.tsv', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_T2w.json', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_T2w.nii.gz', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_run-1_T1w.json', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_run-1_T1w.nii.gz', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.bval', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.bvec', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.json', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.nii.gz', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.bval', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.bvec', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.json', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.nii.gz', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-AP_run-2_epi.json', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-PA_run-1_epi.json', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_events.tsv', 'sub-voice889/ses-2/sub-voice889_ses-2_scans.tsv', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.json', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.nii.gz', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.json', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.nii.gz', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.bval', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.bvec', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.json', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.nii.gz', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.bval', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.bvec', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.json', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.nii.gz', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_events.tsv', 'sub-voice893/ses-1/sub-voice893_ses-1_scans.tsv', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.json', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii.gz', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bval', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bvec', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.json', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii.gz', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_bold.json', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_events.tsv', 'sub-voice897/ses-1/sub-voice897_ses-1_scans.tsv', '.heudiconv']: File(s) unknown to git: "error: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bval' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bvec' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bval' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bvec' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii.gz' did not match any file(s) known to git"). Canceling not-yet running jobs and waiting for completion of running. You can force earlier forceful exit by Ctrl-C.
+[INFO] Canceled 0 out of 0 jobs. 0 left running. 
+INFO: Canceled 0 out of 0 jobs. 0 left running.
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 368, in _iter_threads
+    raise _FinalShutdown()
+datalad.support.parallel._FinalShutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/bin/heudiconv", line 33, in <module>
+    sys.exit(load_entry_point('heudiconv', 'console_scripts', 'heudiconv')())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 24, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 406, in workflow
+    add_to_datalad(outdir, study_outdir, msg, bids_options)
+  File "/src/heudiconv/heudiconv/external/dlad.py", line 125, in add_to_datalad
+    ds.save('.', recursive=True
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/distribution/dataset.py", line 502, in apply_func
+    return f(*args, **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 447, in eval_func
+    return return_func(*args, **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 439, in return_func
+    results = list(results)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 369, in generator_func
+    allkwargs):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 544, in _process_results
+    for res in results:
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/core/local/save.py", line 398, in __call__
+    lgr=lgr,
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 535, in __iter__
+    for res in super().__iter__():
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 265, in __iter__
+    yield from self._iter_threads(self._jobs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 417, in _iter_threads
+    self.shutdown(force=True, exception=self._producer_exception or interrupted_by_exception)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 233, in shutdown
+    raise exception
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 401, in _iter_threads
+    done_useful |= self._pop_done_futures(lgr)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 463, in _pop_done_futures
+    raise exception
+  File "/opt/miniconda-latest/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 329, in consumer_worker
+    for r in res:
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/core/local/save.py", line 322, in save_ds
+    amend=amend):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/gitrepo.py", line 3508, in save_
+    allow_empty=amend)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/annexrepo.py", line 3537, in _save_post
+    allow_empty=allow_empty or adjust_amend)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/gitrepo.py", line 3267, in _save_post
+    careless=True,
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/gitrepo.py", line 1435, in commit
+    l for l in e.stderr.splitlines()
+datalad.support.exceptions.FileNotInRepositoryError: [Errno 1] ['git', '-c', 'diff.ignoreSubmodules=none', 'commit', '-m', '[DATALAD] Recorded changes', '--', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice854/ses-1/sub-voice854_ses-1_scans.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pataka_run-2_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_T2w.json', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_T2w.nii.gz', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_run-1_T1w.json', 'sub-voice886/ses-1/anat/sub-voice886_ses-1_run-1_T1w.nii.gz', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.bval', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.bvec', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.json', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-AP_dwi.nii.gz', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.bval', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.bvec', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.json', 'sub-voice886/ses-1/dwi/sub-voice886_ses-1_acq-PA_dwi.nii.gz', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice886/ses-1/fmap/sub-voice886_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-emosent_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-facematch_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-movie_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-nwr_run-3_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pataka_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.nii', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_bold_heudiconv924.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-rest_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-1_events.tsv', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_bold.json', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice886/ses-1/func/sub-voice886_ses-1_task-vowel_run-2_events.tsv', 'sub-voice886/ses-1/sub-voice886_ses-1_scans.tsv', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_T2w.json', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_T2w.nii.gz', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_run-1_T1w.json', 'sub-voice889/ses-1/anat/sub-voice889_ses-1_run-1_T1w.nii.gz', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.bval', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.bvec', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.json', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-AP_dwi.nii.gz', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.bval', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.bvec', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.json', 'sub-voice889/ses-1/dwi/sub-voice889_ses-1_acq-PA_dwi.nii.gz', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice889/ses-1/fmap/sub-voice889_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-emosent_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-facematch_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-movie_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-nwr_run-3_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pataka_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-rest_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-1_events.tsv', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_bold.json', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice889/ses-1/func/sub-voice889_ses-1_task-vowel_run-2_events.tsv', 'sub-voice889/ses-1/sub-voice889_ses-1_scans.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.nii', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold_heudiconv169.nii.gz', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_T2w.json', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_T2w.nii.gz', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_run-1_T1w.json', 'sub-voice891/ses-1/anat/sub-voice891_ses-1_run-1_T1w.nii.gz', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.bval', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.bvec', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.json', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-AP_dwi.nii.gz', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.bval', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.bvec', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.json', 'sub-voice891/ses-1/dwi/sub-voice891_ses-1_acq-PA_dwi.nii.gz', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice891/ses-1/fmap/sub-voice891_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-emosent_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-facematch_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-movie_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-nwr_run-3_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pataka_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-rest_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-1_events.tsv', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_bold.json', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice891/ses-1/func/sub-voice891_ses-1_task-vowel_run-2_events.tsv', 'sub-voice891/ses-1/sub-voice891_ses-1_scans.tsv', 'participants.tsv', 'sub-voice867/ses-1/sub-voice867_ses-1_scans.tsv', '.gitmodules', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bval', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bvec', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.json', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii', 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii.gz', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold.json', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_events.tsv', 'sub-voice849/ses-1/sub-voice849_ses-1_scans.tsv', 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.json', 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.nii.gz', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.bval', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.bvec', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.json', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-AP_dwi.nii.gz', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.bval', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.bvec', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.json', 'sub-voice854/ses-1/dwi/sub-voice854_ses-1_acq-PA_dwi.nii.gz', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice854/ses-1/fmap/sub-voice854_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_bold.json', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice857/ses-1/func/sub-voice857_ses-1_task-rest_run-1_events.tsv', 'sub-voice857/ses-1/sub-voice857_ses-1_scans.tsv', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_T2w.json', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_T2w.nii.gz', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_run-1_T1w.json', 'sub-voice859/ses-1/anat/sub-voice859_ses-1_run-1_T1w.nii.gz', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.bval', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.bvec', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.json', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-AP_dwi.nii.gz', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.bval', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.bvec', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.json', 'sub-voice859/ses-1/dwi/sub-voice859_ses-1_acq-PA_dwi.nii.gz', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice859/ses-1/fmap/sub-voice859_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_bold.json', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice859/ses-1/func/sub-voice859_ses-1_task-rest_run-1_events.tsv', 'sub-voice859/ses-1/sub-voice859_ses-1_scans.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-1_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-2_events.tsv', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_bold.json', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice867/ses-1/func/sub-voice867_ses-1_task-nwr_run-3_events.tsv', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_T2w.json', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_T2w.nii.gz', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_run-1_T1w.json', 'sub-voice889/ses-2/anat/sub-voice889_ses-2_run-1_T1w.nii.gz', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.bval', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.bvec', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.json', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-AP_dwi.nii.gz', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.bval', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.bvec', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.json', 'sub-voice889/ses-2/dwi/sub-voice889_ses-2_acq-PA_dwi.nii.gz', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-AP_run-2_epi.json', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-PA_run-1_epi.json', 'sub-voice889/ses-2/fmap/sub-voice889_ses-2_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-emosent_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-facematch_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-nwr_run-3_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pataka_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchsent_run-2_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-rest_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-1_events.tsv', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_bold.json', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_bold.nii.gz', 'sub-voice889/ses-2/func/sub-voice889_ses-2_task-vowel_run-2_events.tsv', 'sub-voice889/ses-2/sub-voice889_ses-2_scans.tsv', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.json', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_T2w.nii.gz', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.json', 'sub-voice893/ses-1/anat/sub-voice893_ses-1_run-1_T1w.nii.gz', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.bval', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.bvec', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.json', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-AP_dwi.nii.gz', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.bval', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.bvec', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.json', 'sub-voice893/ses-1/dwi/sub-voice893_ses-1_acq-PA_dwi.nii.gz', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice893/ses-1/fmap/sub-voice893_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-emosent_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-facematch_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-movie_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-nwr_run-3_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pataka_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchnw_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-pitchsent_run-2_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-rest_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-1_events.tsv', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.json', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_bold.nii.gz', 'sub-voice893/ses-1/func/sub-voice893_ses-1_task-vowel_run-2_events.tsv', 'sub-voice893/ses-1/sub-voice893_ses-1_scans.tsv', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.json', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii', 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii.gz', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bval', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bvec', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.json', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii', 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii.gz', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-AP_run-2_epi.json', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-AP_run-2_epi.nii.gz', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-PA_run-1_epi.json', 'sub-voice897/ses-1/fmap/sub-voice897_ses-1_acq-func_dir-PA_run-1_epi.nii.gz', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_bold.json', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_bold.nii.gz', 'sub-voice897/ses-1/func/sub-voice897_ses-1_task-rest_run-1_events.tsv', 'sub-voice897/ses-1/sub-voice897_ses-1_scans.tsv', '.heudiconv']: File(s) unknown to git: "error: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bval' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.bvec' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w_heudiconv547.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold_heudiconv705.nii.gz' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bval' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.bvec' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.json' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii' did not match any file(s) known to git\nerror: pathspec 'sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi_heudiconv003.nii.gz' did not match any file(s) known to git"

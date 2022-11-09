@@ -1,0 +1,392 @@
+INFO: Running heudiconv version 0.11.3+d20220512 latest 0.11.4
+INFO: Need to process 1 study sessions
+INFO: PROCESSING STARTS: {'subject': 'voice993', 'outdir': '/out/', 'session': '1'}
+INFO: Processing 5339 dicoms
+INFO: Analyzing 5339 dicoms
+INFO: Generated sequence info for 52 accession numbers with 5339 entries total
+INFO: Doing conversion using dcm2niix
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-rest_run-1_bold (300 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+WARNING: A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix3s05arfj/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:42:18.015336:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:42:18.015336:Found 300 DICOM file(s)
+INFO: stdout 2022-10-12T23:42:18.015336:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+INFO: stdout 2022-10-12T23:42:18.015336:Convert 300 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-rest_run-1_bold_heudiconv049 (108x108x65x300)
+INFO: stdout 2022-10-12T23:42:45.159077:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-rest_run-1_bold_heudiconv049.nii"
+INFO: stdout 2022-10-12T23:42:45.159077:Conversion required 29.527424 seconds (0.961505 for core code).
+INFO: [Node] Finished "convert", elapsed time 29.593617s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-rest_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-PA_run-1_epi (260 DICOMs) -> /out/sub-voice993/ses-1/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixpkax7fn2/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:42:48.329070:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:42:48.329070:Found 260 DICOM file(s)
+INFO: stdout 2022-10-12T23:42:48.329070:Convert 260 DICOM as /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-PA_run-1_epi_heudiconv963 (108x108x65x4)
+INFO: stdout 2022-10-12T23:42:48.871849:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-PA_run-1_epi_heudiconv963.nii"
+INFO: stdout 2022-10-12T23:42:48.871849:Conversion required 2.630414 seconds (0.187030 for core code).
+INFO: [Node] Finished "convert", elapsed time 2.679728s.
+WARNING: Failed to find task field in /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-PA_run-1_epi.json.
+INFO: Post-treating /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-PA_run-1_epi.json file
+INFO: Converting /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-AP_run-2_epi (260 DICOMs) -> /out/sub-voice993/ses-1/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix1g79t3ft/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:42:50.514493:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:42:50.514493:Found 260 DICOM file(s)
+INFO: stdout 2022-10-12T23:42:50.514493:Convert 260 DICOM as /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-AP_run-2_epi_heudiconv131 (108x108x65x4)
+INFO: stdout 2022-10-12T23:42:50.882822:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-AP_run-2_epi_heudiconv131.nii"
+INFO: stdout 2022-10-12T23:42:50.882822:Conversion required 1.500392 seconds (0.155464 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.547831s.
+WARNING: Failed to find task field in /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-AP_run-2_epi.json.
+INFO: Post-treating /out/sub-voice993/ses-1/fmap/sub-voice993_ses-1_acq-func_dir-AP_run-2_epi.json file
+INFO: Converting /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-PA_dwi (72 DICOMs) -> /out/sub-voice993/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix6u3m97lo/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:42:52.282065:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:42:52.282065:Found 72 DICOM file(s)
+INFO: stdout 2022-10-12T23:42:52.282065:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+INFO: stdout 2022-10-12T23:42:52.282065:Convert 72 DICOM as /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-PA_dwi_heudiconv152 (120x120x66x72)
+INFO: stdout 2022-10-12T23:43:00.622734:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-PA_dwi_heudiconv152.nii"
+INFO: stdout 2022-10-12T23:43:00.622734:Conversion required 9.333905 seconds (0.291575 for core code).
+INFO: [Node] Finished "convert", elapsed time 9.38879s.
+WARNING: Failed to find task field in /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-PA_dwi.json.
+INFO: Post-treating /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-PA_dwi.json file
+INFO: Converting /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-AP_dwi (7 DICOMs) -> /out/sub-voice993/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixua4g4uzh/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:01.226928:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:01.226928:Found 7 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:01.226928:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+INFO: stdout 2022-10-12T23:43:01.226928:Convert 7 DICOM as /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-AP_dwi_heudiconv627 (120x120x66x7)
+INFO: stdout 2022-10-12T23:43:02.175871:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-AP_dwi_heudiconv627.nii"
+INFO: stdout 2022-10-12T23:43:02.175871:Conversion required 1.315580 seconds (0.052560 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.382578s.
+WARNING: Failed to find task field in /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-AP_dwi.json.
+INFO: Post-treating /out/sub-voice993/ses-1/dwi/sub-voice993_ses-1_acq-AP_dwi.json file
+INFO: Converting /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_run-1_T1w (176 DICOMs) -> /out/sub-voice993/ses-1/anat . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix83t7u8ew/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:03.159119:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:03.159119:Found 176 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:03.159119:Convert 176 DICOM as /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_run-1_T1w_heudiconv924 (256x256x176x1)
+INFO: stdout 2022-10-12T23:43:04.569556:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/anat/sub-voice993_ses-1_run-1_T1w_heudiconv924.nii"
+INFO: stdout 2022-10-12T23:43:04.569556:Conversion required 2.036487 seconds (0.260644 for core code).
+INFO: [Node] Finished "convert", elapsed time 2.086187s.
+WARNING: Failed to find task field in /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_run-1_T1w.json.
+INFO: Post-treating /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_run-1_T1w.json file
+INFO: Converting /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_T2w (176 DICOMs) -> /out/sub-voice993/ses-1/anat . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix6z43_11n/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:06.217831:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:06.217831:Found 176 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:06.217831:Convert 176 DICOM as /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_T2w_heudiconv509 (256x256x176x1)
+INFO: stdout 2022-10-12T23:43:07.690994:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/anat/sub-voice993_ses-1_T2w_heudiconv509.nii"
+INFO: stdout 2022-10-12T23:43:07.690994:Conversion required 2.459792 seconds (0.300983 for core code).
+INFO: [Node] Finished "convert", elapsed time 2.523688s.
+WARNING: Failed to find task field in /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_T2w.json.
+INFO: Post-treating /out/sub-voice993/ses-1/anat/sub-voice993_ses-1_T2w.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-1_bold (207 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixp2c3jpw8/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:10.014183:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:10.014183:Found 207 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:10.014183:Warning: Slice timing appears corrupted (range 0..3135, TR=1640 ms)
+INFO: stdout 2022-10-12T23:43:10.014183:Convert 207 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-1_bold_heudiconv136 (72x72x45x207)
+INFO: stdout 2022-10-12T23:43:15.586409:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-1_bold_heudiconv136.nii"
+INFO: stdout 2022-10-12T23:43:15.586409:Conversion required 7.003984 seconds (0.304335 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.053515s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-2_bold (207 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixquh2k1uv/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:17.558288:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:17.558288:Found 207 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:17.558288:Warning: Slice timing appears corrupted (range 0..3137.5, TR=1640 ms)
+INFO: stdout 2022-10-12T23:43:17.558288:Convert 207 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-2_bold_heudiconv673 (72x72x45x207)
+INFO: stdout 2022-10-12T23:43:23.431044:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-2_bold_heudiconv673.nii"
+INFO: stdout 2022-10-12T23:43:23.431044:Conversion required 7.237252 seconds (0.318268 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.297811s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pataka_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-1_bold (57 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix3ee488zz/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:24.311058:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:24.311058:Found 57 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:24.311058:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-12T23:43:24.311058:Convert 57 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-1_bold_heudiconv364 (108x108x65x57)
+INFO: stdout 2022-10-12T23:43:29.639540:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-1_bold_heudiconv364.nii"
+INFO: stdout 2022-10-12T23:43:29.639540:Conversion required 5.807267 seconds (0.194212 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.863652s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-2_bold (57 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixszwmd7hz/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:30.690047:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:30.690047:Found 57 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:30.690047:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-12T23:43:30.690047:Convert 57 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-2_bold_heudiconv582 (108x108x65x57)
+INFO: stdout 2022-10-12T23:43:35.581327:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-2_bold_heudiconv582.nii"
+INFO: stdout 2022-10-12T23:43:35.581327:Conversion required 5.546967 seconds (0.190548 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.599493s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-3_bold (57 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix2t64ldoh/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:36.098842:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:36.098842:Found 57 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:36.098842:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-12T23:43:36.098842:Convert 57 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-3_bold_heudiconv565 (108x108x65x57)
+INFO: stdout 2022-10-12T23:43:41.020780:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-3_bold_heudiconv565.nii"
+INFO: stdout 2022-10-12T23:43:41.020780:Conversion required 5.198041 seconds (0.187902 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.256134s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchsent_run-3_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-1_bold (42 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixr9tnp03n/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:41.750081:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:41.750081:Found 42 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:41.750081:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-12T23:43:41.750081:Convert 42 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-1_bold_heudiconv546 (108x108x65x42)
+INFO: stdout 2022-10-12T23:43:45.693256:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-1_bold_heudiconv546.nii"
+INFO: stdout 2022-10-12T23:43:45.693256:Conversion required 4.282027 seconds (0.155625 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.333462s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-2_bold (42 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix909tbudz/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:46.111873:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:46.111873:Found 42 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:46.111873:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-12T23:43:46.111873:Convert 42 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-2_bold_heudiconv497 (108x108x65x42)
+INFO: stdout 2022-10-12T23:43:49.791579:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-2_bold_heudiconv497.nii"
+INFO: stdout 2022-10-12T23:43:49.791579:Conversion required 3.879441 seconds (0.131137 for core code).
+INFO: [Node] Finished "convert", elapsed time 3.934834s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-3_bold (42 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix8j9kvop4/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:50.824698:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:50.824698:Found 42 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:50.824698:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-12T23:43:50.824698:Convert 42 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-3_bold_heudiconv952 (108x108x65x42)
+INFO: stdout 2022-10-12T23:43:54.519932:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-3_bold_heudiconv952.nii"
+INFO: stdout 2022-10-12T23:43:54.519932:Conversion required 3.924429 seconds (0.135373 for core code).
+INFO: [Node] Finished "convert", elapsed time 3.986096s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-nwr_run-3_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-1_bold (99 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixy_el8eoz/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:43:55.722415:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:43:55.722415:Found 99 DICOM file(s)
+INFO: stdout 2022-10-12T23:43:55.722415:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-12T23:43:55.722415:Convert 99 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-1_bold_heudiconv547 (108x108x65x99)
+INFO: stdout 2022-10-12T23:44:04.380360:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-1_bold_heudiconv547.nii"
+INFO: stdout 2022-10-12T23:44:04.380360:Conversion required 9.338076 seconds (0.323465 for core code).
+INFO: [Node] Finished "convert", elapsed time 9.392399s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-2_bold (99 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixu9vbgcgf/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:05.110654:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:05.110654:Found 99 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:05.110654:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-12T23:44:05.110654:Convert 99 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-2_bold_heudiconv003 (108x108x65x99)
+INFO: stdout 2022-10-12T23:44:14.089059:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-2_bold_heudiconv003.nii"
+INFO: stdout 2022-10-12T23:44:14.089059:Conversion required 9.469441 seconds (0.321806 for core code).
+INFO: [Node] Finished "convert", elapsed time 9.524164s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-facematch_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-1_bold (42 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix_80_gkdm/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:15.118096:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:15.118096:Found 42 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:15.118096:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-12T23:44:15.118096:Convert 42 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-1_bold_heudiconv970 (108x108x65x42)
+INFO: stdout 2022-10-12T23:44:19.062443:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-1_bold_heudiconv970.nii"
+INFO: stdout 2022-10-12T23:44:19.062443:Conversion required 4.314068 seconds (0.146436 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.38014s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-2_bold (42 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix9xu_4m8p/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:20.070401:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:20.070401:Found 42 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:20.070401:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-12T23:44:20.070401:Convert 42 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-2_bold_heudiconv068 (108x108x65x42)
+INFO: stdout 2022-10-12T23:44:24.298393:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-2_bold_heudiconv068.nii"
+INFO: stdout 2022-10-12T23:44:24.298393:Conversion required 4.685625 seconds (0.149086 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.764255s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-emosent_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-1_bold (55 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix2pwubk1d/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:25.603822:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:25.603822:Found 55 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:25.603822:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-12T23:44:25.603822:Convert 55 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-1_bold_heudiconv224 (108x108x65x55)
+INFO: stdout 2022-10-12T23:44:31.781435:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-1_bold_heudiconv224.nii"
+INFO: stdout 2022-10-12T23:44:31.781435:Conversion required 6.715491 seconds (0.198062 for core code).
+INFO: [Node] Finished "convert", elapsed time 6.80443s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-2_bold (55 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix20e3vkff/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:32.560745:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:32.560745:Found 55 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:32.560745:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-12T23:44:32.560745:Convert 55 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-2_bold_heudiconv236 (108x108x65x55)
+INFO: stdout 2022-10-12T23:44:37.140363:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-2_bold_heudiconv236.nii"
+INFO: stdout 2022-10-12T23:44:37.140363:Conversion required 5.053259 seconds (0.180711 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.107517s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-vowel_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-1_bold (101 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixva2swn1o/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:38.556001:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:38.556001:Found 101 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:38.556001:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-12T23:44:38.556001:Convert 101 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-1_bold_heudiconv246 (108x108x65x101)
+INFO: stdout 2022-10-12T23:44:47.387666:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-1_bold_heudiconv246.nii"
+INFO: stdout 2022-10-12T23:44:47.387666:Conversion required 9.832268 seconds (0.367654 for core code).
+INFO: [Node] Finished "convert", elapsed time 9.886904s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-1_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-2_bold (101 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixsmvciu0m/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:44:48.704787:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:44:48.704787:Found 101 DICOM file(s)
+INFO: stdout 2022-10-12T23:44:48.704787:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-12T23:44:48.704787:Convert 101 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-2_bold_heudiconv596 (108x108x65x101)
+INFO: stdout 2022-10-12T23:44:57.993032:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-2_bold_heudiconv596.nii"
+INFO: stdout 2022-10-12T23:44:57.993032:Conversion required 10.139304 seconds (0.341368 for core code).
+INFO: [Node] Finished "convert", elapsed time 10.214142s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-pitchnw_run-2_bold.json file
+INFO: Converting /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-movie_run-1_bold (138 DICOMs) -> /out/sub-voice993/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixkptqkfes/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-12T23:45:00.045221:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-12T23:45:00.045221:Found 138 DICOM file(s)
+INFO: stdout 2022-10-12T23:45:00.045221:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+INFO: stdout 2022-10-12T23:45:00.045221:Convert 138 DICOM as /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-movie_run-1_bold_heudiconv225 (108x108x65x138)
+INFO: stdout 2022-10-12T23:45:12.333198:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-movie_run-1_bold_heudiconv225.nii"
+INFO: stdout 2022-10-12T23:45:12.333198:Conversion required 13.647118 seconds (0.487739 for core code).
+INFO: [Node] Finished "convert", elapsed time 13.700631s.
+INFO: Post-treating /out/sub-voice993/ses-1/func/sub-voice993_ses-1_task-movie_run-1_bold.json file
+WARNING: Existing lockfile found in /out/heudiconv.lock - waiting for the lock to be released. To set a timeout limit, set the HEUDICONV_FILELOCK_TIMEOUT environmental variable to a value in seconds. If this process hangs, it may require a manual deletion of the /out/heudiconv.lock.
+INFO: Populating template files under /out/
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+WARNING: Caught [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'. Will retry again
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/bin/heudiconv", line 33, in <module>
+    sys.exit(load_entry_point('heudiconv', 'console_scripts', 'heudiconv')())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 24, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 393, in workflow
+    grouping=grouping,)
+  File "/src/heudiconv/heudiconv/convert.py", line 239, in prep_conversion
+    getattr(heuristic, 'DEFAULT_FIELDS', {}))
+  File "/src/heudiconv/heudiconv/bids.py", line 156, in populate_bids_templates
+    populate_aggregated_jsons(path)
+  File "/src/heudiconv/heudiconv/bids.py", line 189, in populate_aggregated_jsons
+    json_ = load_json(fpath, retry=100)
+  File "/src/heudiconv/heudiconv/utils.py", line 186, in load_json
+    with open(filename, 'r') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: '/out/sub-voice960/ses-1/func/sub-voice960_ses-1_task-pitchnw_run-2_bold.json'

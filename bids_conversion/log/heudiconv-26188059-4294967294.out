@@ -1,0 +1,410 @@
+Submitited subject: voice975
+Submitted session: 1
+Command:
+singularity run -B /om2/scratch/Wed/rfbrito/dicom -B /om2/user/rfbrito/voice_depression/bids_conversion -B /om2/scratch/Wed/rfbrito/bids:/out /om2/user/rfbrito/containers/imaging/heudiconv_latest.sif -d /om2/scratch/Wed/rfbrito/dicom/{subject}/session001*/dicom/Trio*/*.dcm -o /out -f /om2/user/rfbrito/voice_depression/bids_conversion/heuristic.py -c dcm2niix -s voice975 -ss 1 -b --minmeta -g accession_number
+['3-SMS5_rsfMRI_PA']
+[{'item': '4-Spin_Echo_EPI_PA', 'dir': 'PA'}, {'item': '5-Spin_Echo_EPI_AP', 'dir': 'AP'}]
+[{'item': '6-SMS2-diff_b1000_free_11b0_61dirs_PA', 'acq': 'PA'}, {'item': '11-SMS2-diff_b1000_free_4b0_AP', 'acq': 'AP'}]
+['15-T1_MPRAGE_Ellison_4e_p2_1mm_iso']
+[]
+['20-PaTaKa_1_SMS5_Sparse_3x3x3_1640_1000ms', '21-PaTaKa_2_SMS5_Sparse_3x3x3_1640_1000ms']
+['24-Sentences_1_SMS5_Sparse_2x2x2_4000_2900ms', '25-Sentences_2_SMS5_Sparse_2x2x2_4000_2900ms']
+['28-Nonword_1_SMS5_Sparse_2x2x2_4000_2900ms', '29-Nonword_2_SMS5_Sparse_2x2x2_4000_2900ms', '30-Nonword_3_SMS5_Sparse_2x2x2_4000_2900ms']
+['31-FaceMatch_1_SMS5_Sparse_2x2x2_2000_900ms', '32-FaceMatch_2_SMS5_Sparse_2x2x2_2000_900ms']
+['35-EmoSent_1_SMS5_Sparse_2x2x2_4000_2900ms', '36-EmoSent_2_SMS5_Sparse_2x2x2_4000_2900ms']
+['38-Vowels_1_SMS5_Sparse_2x2x2_4000_2900ms', '39-Vowels_2_SMS5_Sparse_2x2x2_4000_2900ms']
+['40-PitchEmph_1_SMS5_Sparse_2x2x2_2000_900ms', '41-PitchEmph_2_SMS5_Sparse_2x2x2_2000_900ms']
+['44-Movie_SMS5_rsfMRI_PA']
+221012-23:40:31,239 nipype.utils WARNING:
+	 A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+221012-23:40:31,581 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixfvvvaqyn/convert".
+221012-23:40:31,700 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:40:32,710 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:32.710130:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:40:32,710 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:32.710130:Found 300 DICOM file(s)
+221012-23:40:32,710 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:32.710130:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+221012-23:40:32,710 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:32.710130:Convert 300 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-rest_run-1_bold_heudiconv039 (108x108x65x300)
+221012-23:40:57,165 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:57.165654:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-rest_run-1_bold_heudiconv039.nii"
+221012-23:40:57,167 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:57.165654:Conversion required 25.403055 seconds (0.663096 for core code).
+221012-23:40:57,186 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 25.43132s.
+221012-23:40:57,477 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixl4w7oqq7/convert".
+221012-23:40:57,525 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:40:58,365 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:58.365700:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:40:58,366 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:58.365700:Found 260 DICOM file(s)
+221012-23:40:58,366 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:58.365700:Convert 260 DICOM as /out/sub-voice975/ses-1/fmap/sub-voice975_ses-1_acq-func_dir-PA_run-1_epi_heudiconv822 (108x108x65x4)
+221012-23:40:58,766 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:58.766230:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/fmap/sub-voice975_ses-1_acq-func_dir-PA_run-1_epi_heudiconv822.nii"
+221012-23:40:58,766 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:58.766230:Conversion required 1.218811 seconds (0.112730 for core code).
+221012-23:40:58,788 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 1.261816s.
+221012-23:40:59,10 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix1sypf39a/convert".
+221012-23:40:59,60 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:40:59,609 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:59.608980:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:40:59,609 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:59.608980:Found 260 DICOM file(s)
+221012-23:40:59,609 nipype.interface INFO:
+	 stdout 2022-10-12T23:40:59.608980:Convert 260 DICOM as /out/sub-voice975/ses-1/fmap/sub-voice975_ses-1_acq-func_dir-AP_run-2_epi_heudiconv483 (108x108x65x4)
+221012-23:41:00,54 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:00.053995:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/fmap/sub-voice975_ses-1_acq-func_dir-AP_run-2_epi_heudiconv483.nii"
+221012-23:41:00,54 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:00.053995:Conversion required 0.976216 seconds (0.114028 for core code).
+221012-23:41:00,79 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 1.01838s.
+221012-23:41:00,202 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixxf7vzlu1/convert".
+221012-23:41:00,217 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:00,864 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:00.863843:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:00,864 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:00.863843:Found 72 DICOM file(s)
+221012-23:41:00,864 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:00.863843:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+221012-23:41:00,864 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:00.863843:Convert 72 DICOM as /out/sub-voice975/ses-1/dwi/sub-voice975_ses-1_acq-PA_dwi_heudiconv394 (120x120x66x72)
+221012-23:41:08,369 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:08.369344:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/dwi/sub-voice975_ses-1_acq-PA_dwi_heudiconv394.nii"
+221012-23:41:08,370 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:08.369344:Conversion required 8.141101 seconds (0.244516 for core code).
+221012-23:41:08,391 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 8.173608s.
+221012-23:41:08,547 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix2ahb05ze/convert".
+221012-23:41:08,551 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:08,712 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:08.712595:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:08,713 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:08.712595:Found 7 DICOM file(s)
+221012-23:41:08,713 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:08.712595:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+221012-23:41:08,713 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:08.712595:Convert 7 DICOM as /out/sub-voice975/ses-1/dwi/sub-voice975_ses-1_acq-AP_dwi_heudiconv209 (120x120x66x7)
+221012-23:41:09,592 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:09.592958:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/dwi/sub-voice975_ses-1_acq-AP_dwi_heudiconv209.nii"
+221012-23:41:09,593 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:09.592958:Conversion required 1.020394 seconds (0.031383 for core code).
+221012-23:41:09,616 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 1.064194s.
+221012-23:41:09,754 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixf8qdxpkx/convert".
+221012-23:41:09,795 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:10,251 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:10.251355:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:10,251 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:10.251355:Found 176 DICOM file(s)
+221012-23:41:10,251 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:10.251355:Convert 176 DICOM as /out/sub-voice975/ses-1/anat/sub-voice975_ses-1_run-1_T1w_heudiconv773 (256x256x176x1)
+221012-23:41:11,647 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:11.647834:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/anat/sub-voice975_ses-1_run-1_T1w_heudiconv773.nii"
+221012-23:41:11,648 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:11.647834:Conversion required 1.835113 seconds (0.364105 for core code).
+221012-23:41:11,667 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 1.871677s.
+221012-23:41:11,844 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixgpggl5l_/convert".
+221012-23:41:11,885 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:12,382 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:12.382445:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:12,382 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:12.382445:Found 207 DICOM file(s)
+221012-23:41:12,383 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:12.382445:Warning: Slice timing appears corrupted (range 0..3135, TR=1640 ms)
+221012-23:41:12,383 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:12.382445:Convert 207 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pataka_run-1_bold_heudiconv530 (72x72x45x207)
+221012-23:41:18,593 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:18.593745:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pataka_run-1_bold_heudiconv530.nii"
+221012-23:41:18,594 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:18.593745:Conversion required 6.695633 seconds (0.247977 for core code).
+221012-23:41:18,621 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 6.735816s.
+221012-23:41:19,45 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixpinmx87g/convert".
+221012-23:41:19,135 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:19,650 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:19.650486:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:19,651 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:19.650486:Found 207 DICOM file(s)
+221012-23:41:19,651 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:19.650486:Warning: Slice timing appears corrupted (range 0..3135, TR=1640 ms)
+221012-23:41:19,651 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:19.650486:Convert 207 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pataka_run-2_bold_heudiconv161 (72x72x45x207)
+221012-23:41:24,966 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:24.965991:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pataka_run-2_bold_heudiconv161.nii"
+221012-23:41:24,967 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:24.965991:Conversion required 5.810067 seconds (0.230856 for core code).
+221012-23:41:24,986 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 5.850316s.
+221012-23:41:25,93 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixe3tdf48x/convert".
+221012-23:41:25,107 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:25,390 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:25.390495:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:25,391 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:25.390495:Found 64 DICOM file(s)
+221012-23:41:25,391 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:25.390495:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221012-23:41:25,391 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:25.390495:Convert 64 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchsent_run-1_bold_heudiconv552 (108x108x65x64)
+221012-23:41:30,998 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:30.998380:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchsent_run-1_bold_heudiconv552.nii"
+221012-23:41:31,1 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:30.998380:Conversion required 5.876089 seconds (0.164361 for core code).
+221012-23:41:31,46 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 5.938041s.
+221012-23:41:31,295 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixqs6yc880/convert".
+221012-23:41:31,320 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:31,721 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:31.721806:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:31,722 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:31.721806:Found 64 DICOM file(s)
+221012-23:41:31,722 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:31.721806:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221012-23:41:31,722 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:31.721806:Convert 64 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchsent_run-2_bold_heudiconv010 (108x108x65x64)
+221012-23:41:37,48 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:37.048905:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchsent_run-2_bold_heudiconv010.nii"
+221012-23:41:37,49 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:37.048905:Conversion required 5.706966 seconds (0.192431 for core code).
+221012-23:41:37,74 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 5.75362s.
+221012-23:41:37,168 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixtpnyenmx/convert".
+221012-23:41:37,178 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:37,313 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:37.313078:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:37,313 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:37.313078:Found 42 DICOM file(s)
+221012-23:41:37,313 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:37.313078:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221012-23:41:37,313 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:37.313078:Convert 42 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-nwr_run-1_bold_heudiconv363 (108x108x65x42)
+221012-23:41:40,931 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:40.931710:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-nwr_run-1_bold_heudiconv363.nii"
+221012-23:41:40,931 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:40.931710:Conversion required 3.741338 seconds (0.079347 for core code).
+221012-23:41:40,996 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 3.817062s.
+221012-23:41:41,133 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixjmq9azpi/convert".
+221012-23:41:41,150 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:41,330 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:41.329905:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:41,330 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:41.329905:Found 42 DICOM file(s)
+221012-23:41:41,330 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:41.329905:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221012-23:41:41,330 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:41.329905:Convert 42 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-nwr_run-2_bold_heudiconv624 (108x108x65x42)
+221012-23:41:44,993 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:44.993656:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-nwr_run-2_bold_heudiconv624.nii"
+221012-23:41:44,993 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:44.993656:Conversion required 3.822426 seconds (0.124422 for core code).
+221012-23:41:45,29 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 3.878358s.
+221012-23:41:45,280 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixh0hes1sr/convert".
+221012-23:41:45,292 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:45,540 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:45.539903:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:45,540 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:45.539903:Found 42 DICOM file(s)
+221012-23:41:45,540 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:45.539903:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221012-23:41:45,540 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:45.539903:Convert 42 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-nwr_run-3_bold_heudiconv567 (108x108x65x42)
+221012-23:41:49,120 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:49.120453:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-nwr_run-3_bold_heudiconv567.nii"
+221012-23:41:49,121 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:49.120453:Conversion required 3.816329 seconds (0.108324 for core code).
+221012-23:41:49,141 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 3.84834s.
+221012-23:41:49,250 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix52fcqk1l/convert".
+221012-23:41:49,269 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:49,619 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:49.619577:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:49,620 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:49.619577:Found 99 DICOM file(s)
+221012-23:41:49,620 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:49.619577:Warning: Slice timing appears corrupted (range 0..5357.5, TR=2000 ms)
+221012-23:41:49,620 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:49.619577:Convert 99 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-facematch_run-1_bold_heudiconv465 (108x108x65x99)
+221012-23:41:57,990 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:57.990042:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-facematch_run-1_bold_heudiconv465.nii"
+221012-23:41:57,992 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:57.990042:Conversion required 8.694947 seconds (0.238575 for core code).
+221012-23:41:58,17 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 8.747271s.
+221012-23:41:58,255 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixa_xq_9dx/convert".
+221012-23:41:58,276 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:41:58,680 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:58.680815:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:41:58,681 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:58.680815:Found 99 DICOM file(s)
+221012-23:41:58,681 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:58.680815:Warning: Slice timing appears corrupted (range 0..5357.5, TR=2000 ms)
+221012-23:41:58,681 nipype.interface INFO:
+	 stdout 2022-10-12T23:41:58.680815:Convert 99 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-facematch_run-2_bold_heudiconv364 (108x108x65x99)
+221012-23:42:07,227 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:07.227495:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-facematch_run-2_bold_heudiconv364.nii"
+221012-23:42:07,228 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:07.227495:Conversion required 8.930105 seconds (0.252965 for core code).
+221012-23:42:07,277 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 9.000627s.
+221012-23:42:07,569 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix5hg_vflw/convert".
+221012-23:42:07,592 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:08,403 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:08.403791:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:08,404 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:08.403791:Found 48 DICOM file(s)
+221012-23:42:08,404 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:08.403791:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221012-23:42:08,404 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:08.403791:Convert 48 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-emosent_run-1_bold_heudiconv339 (108x108x65x48)
+221012-23:42:12,922 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:12.921959:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-emosent_run-1_bold_heudiconv339.nii"
+221012-23:42:12,922 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:12.921959:Conversion required 5.307287 seconds (0.131086 for core code).
+221012-23:42:12,960 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 5.366528s.
+221012-23:42:13,434 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixb34s2y11/convert".
+221012-23:42:13,445 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:13,740 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:13.740411:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:13,740 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:13.740411:Found 48 DICOM file(s)
+221012-23:42:13,741 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:13.740411:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221012-23:42:13,741 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:13.740411:Convert 48 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-emosent_run-2_bold_heudiconv163 (108x108x65x48)
+221012-23:42:17,948 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:17.948439:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-emosent_run-2_bold_heudiconv163.nii"
+221012-23:42:17,949 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:17.948439:Conversion required 4.445700 seconds (0.133348 for core code).
+221012-23:42:17,973 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 4.526541s.
+221012-23:42:18,252 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixbawu33ky/convert".
+221012-23:42:18,265 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:18,802 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:18.802392:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:18,802 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:18.802392:Found 60 DICOM file(s)
+221012-23:42:18,803 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:18.802392:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221012-23:42:18,803 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:18.802392:Convert 60 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-vowel_run-1_bold_heudiconv805 (108x108x65x60)
+221012-23:42:24,430 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:24.430241:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-vowel_run-1_bold_heudiconv805.nii"
+221012-23:42:24,433 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:24.430241:Conversion required 6.147700 seconds (0.169323 for core code).
+221012-23:42:24,493 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 6.226732s.
+221012-23:42:25,602 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixme_oq_gn/convert".
+221012-23:42:25,624 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:26,94 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:26.093826:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:26,94 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:26.093826:Found 60 DICOM file(s)
+221012-23:42:26,94 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:26.093826:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221012-23:42:26,94 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:26.093826:Convert 60 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-vowel_run-2_bold_heudiconv704 (108x108x65x60)
+221012-23:42:31,305 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:31.305913:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-vowel_run-2_bold_heudiconv704.nii"
+221012-23:42:31,306 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:31.305913:Conversion required 5.659722 seconds (0.168787 for core code).
+221012-23:42:31,339 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 5.714032s.
+221012-23:42:31,900 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixoptmflsc/convert".
+221012-23:42:31,921 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:32,540 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:32.540349:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:32,540 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:32.540349:Found 101 DICOM file(s)
+221012-23:42:32,541 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:32.540349:Warning: Slice timing appears corrupted (range 0..5357.5, TR=2000 ms)
+221012-23:42:32,541 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:32.540349:Convert 101 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchnw_run-1_bold_heudiconv919 (108x108x65x101)
+221012-23:42:41,654 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:41.654562:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchnw_run-1_bold_heudiconv919.nii"
+221012-23:42:41,655 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:41.654562:Conversion required 9.718500 seconds (0.261713 for core code).
+221012-23:42:41,687 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 9.765827999999999s.
+221012-23:42:41,871 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixttcxtg87/convert".
+221012-23:42:41,894 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:42,385 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:42.385148:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:42,385 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:42.385148:Found 101 DICOM file(s)
+221012-23:42:42,385 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:42.385148:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+221012-23:42:42,385 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:42.385148:Convert 101 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchnw_run-2_bold_heudiconv258 (108x108x65x101)
+221012-23:42:51,184 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:51.184393:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-pitchnw_run-2_bold_heudiconv258.nii"
+221012-23:42:51,185 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:51.184393:Conversion required 9.276701 seconds (0.259581 for core code).
+221012-23:42:51,224 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 9.329083s.
+221012-23:42:51,643 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixkg58hbaf/convert".
+221012-23:42:51,703 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:42:52,287 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:52.287107:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:42:52,287 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:52.287107:Found 138 DICOM file(s)
+221012-23:42:52,287 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:52.287107:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+221012-23:42:52,287 nipype.interface INFO:
+	 stdout 2022-10-12T23:42:52.287107:Convert 138 DICOM as /out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-movie_run-1_bold_heudiconv665 (108x108x65x138)
+221012-23:43:04,80 nipype.interface INFO:
+	 stdout 2022-10-12T23:43:04.080626:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice975/ses-1/func/sub-voice975_ses-1_task-movie_run-1_bold_heudiconv665.nii"
+221012-23:43:04,81 nipype.interface INFO:
+	 stdout 2022-10-12T23:43:04.080626:Conversion required 12.351623 seconds (0.329462 for core code).
+221012-23:43:04,103 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 12.398565s.
+DONE

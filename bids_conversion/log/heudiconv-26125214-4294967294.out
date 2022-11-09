@@ -1,0 +1,881 @@
+Submitited subject: voice849
+Submitted session: 1
+Command:
+singularity run -B /mindhive -B /om2/user/rfbrito/voice_depression/bids_conversion -B /om2/scratch/Wed/rfbrito/bids:/out /om2/user/rfbrito/containers/imaging/heudiconv_latest.sif -d /mindhive/xnat/dicom_storage/voice/dicom/{subject}/session001*/dicom/Trio*/*.dcm -o /out -f /om2/user/rfbrito/voice_depression/bids_conversion/heuristic.py -c dcm2niix -s voice849 -ss 1 --datalad -b --minmeta -g accession_number
+['3-SMS5_rsfMRI_PA']
+[{'item': '4-Spin_Echo_EPI_PA', 'dir': 'PA'}, {'item': '5-Spin_Echo_EPI_AP', 'dir': 'AP'}]
+[{'item': '6-SMS2-diff_b1000_free_11b0_61dirs_PA', 'acq': 'PA'}, {'item': '11-SMS2-diff_b1000_free_4b0_AP', 'acq': 'AP'}]
+['15-T1_MPRAGE_Ellison_4e_p2_1mm_iso']
+['43-T2_SPACE_FLAIR_1.0_iso']
+['21-PaTaKa_1_SMS5_Sparse_3x3x3_1640_1000ms', '22-PaTaKa_2_SMS5_Sparse_3x3x3_1640_1000ms']
+['35-Sentences_1_SMS5_Sparse_2x2x2_4000_2900ms', '36-Sentences_2_SMS5_Sparse_2x2x2_4000_2900ms']
+['32-Nonword_1_SMS5_Sparse_2x2x2_4000_2900ms', '33-Nonword_2_SMS5_Sparse_2x2x2_4000_2900ms', '34-Nonword_3_SMS5_Sparse_2x2x2_4000_2900ms']
+['28-FaceMatch_1_SMS5_Sparse_2x2x2_2000_900ms', '29-FaceMatch_2_SMS5_Sparse_2x2x2_2000_900ms']
+['25-EmoSent_1_SMS5_Sparse_2x2x2_4000_2900ms', '26-EmoSent_2_SMS5_Sparse_2x2x2_4000_2900ms']
+['19-Vowels_1_SMS5_Sparse_2x2x2_4000_2900ms', '20-Vowels_2_SMS5_Sparse_2x2x2_4000_2900ms']
+['39-PitchEmph_1_SMS5_Sparse_2x2x2_2000_900ms', '40-PitchEmph_2_SMS5_Sparse_2x2x2_2000_900ms']
+['41-Movie_SMS5_rsfMRI_PA']
+221007-18:38:08,458 nipype.utils WARNING:
+	 A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+221007-18:38:10,451 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixj7eawmb6/convert".
+221007-18:38:10,701 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:38:13,801 nipype.interface INFO:
+	 stdout 2022-10-07T18:38:13.800915:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:38:13,825 nipype.interface INFO:
+	 stdout 2022-10-07T18:38:13.800915:Found 296 DICOM file(s)
+221007-18:38:13,825 nipype.interface INFO:
+	 stdout 2022-10-07T18:38:13.800915:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+221007-18:38:13,825 nipype.interface INFO:
+	 stdout 2022-10-07T18:38:13.800915:Convert 296 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold_heudiconv912 (108x108x65x296)
+221007-18:38:49,34 nipype.interface INFO:
+	 stdout 2022-10-07T18:38:49.033942:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-rest_run-1_bold_heudiconv912.nii"
+221007-18:38:49,44 nipype.interface INFO:
+	 stdout 2022-10-07T18:38:49.033942:Conversion required 38.004412 seconds (2.065344 for core code).
+221007-18:38:49,131 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 38.120743s.
+221007-18:38:56,707 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix6tqfi0qa/convert".
+221007-18:38:57,181 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:39:02,727 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:02.726891:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:39:02,847 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:02.726891:Found 260 DICOM file(s)
+221007-18:39:02,847 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:02.726891:Convert 260 DICOM as /out/sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi_heudiconv254 (108x108x65x4)
+221007-18:39:03,278 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:03.277999:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-PA_run-1_epi_heudiconv254.nii"
+221007-18:39:03,278 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:03.277999:Conversion required 2.150654 seconds (1.262433 for core code).
+221007-18:39:03,332 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 6.149939s.
+221007-18:39:07,718 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixd05wv04p/convert".
+221007-18:39:08,506 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:39:15,407 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:15.407109:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:39:15,667 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:15.407109:Found 260 DICOM file(s)
+221007-18:39:15,667 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:15.407109:Convert 260 DICOM as /out/sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi_heudiconv673 (108x108x65x4)
+221007-18:39:16,130 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:16.130248:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/fmap/sub-voice849_ses-1_acq-func_dir-AP_run-2_epi_heudiconv673.nii"
+221007-18:39:16,130 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:16.130248:Conversion required 7.078270 seconds (2.386099 for core code).
+221007-18:39:16,228 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 7.720499s.
+221007-18:39:18,277 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix0x0_gjdq/convert".
+221007-18:39:18,320 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:39:28,400 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:28.400649:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:39:29,614 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:28.400649:Found 72 DICOM file(s)
+221007-18:39:29,614 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:28.400649:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+221007-18:39:29,614 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:28.400649:Convert 72 DICOM as /out/sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435 (120x120x66x72)
+221007-18:39:41,780 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:41.780398:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi_heudiconv435.nii"
+221007-18:39:42,745 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:41.780398:Conversion required 23.215008 seconds (2.065620 for core code).
+221007-18:39:42,774 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 24.453051s.
+221007-18:39:43,11 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix0m9cczfq/convert".
+221007-18:39:44,647 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:39:47,420 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:47.420515:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:39:47,420 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:47.420515:Found 7 DICOM file(s)
+221007-18:39:47,421 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:47.420515:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+221007-18:39:47,421 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:47.420515:Convert 7 DICOM as /out/sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-AP_dwi_heudiconv314 (120x120x66x7)
+221007-18:39:49,56 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:49.056159:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-AP_dwi_heudiconv314.nii"
+221007-18:39:49,149 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:49.056159:Conversion required 2.502381 seconds (0.252529 for core code).
+221007-18:39:49,192 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 4.543827s.
+221007-18:39:51,150 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixyvph7_9c/convert".
+221007-18:39:51,429 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:39:55,652 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:55.652570:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:39:55,836 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:55.652570:Found 176 DICOM file(s)
+221007-18:39:55,836 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:55.652570:Convert 176 DICOM as /out/sub-voice849/ses-1/anat/sub-voice849_ses-1_run-1_T1w_heudiconv913 (256x256x176x1)
+221007-18:39:57,418 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:57.418739:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/anat/sub-voice849_ses-1_run-1_T1w_heudiconv913.nii"
+221007-18:39:57,418 nipype.interface INFO:
+	 stdout 2022-10-07T18:39:57.418739:Conversion required 4.035399 seconds (2.250843 for core code).
+221007-18:39:57,464 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 6.033665s.
+221007-18:39:58,190 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixk6n1njgw/convert".
+221007-18:39:58,648 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:40:02,96 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:02.096360:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:40:04,45 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:02.096360:Found 176 DICOM file(s)
+221007-18:40:04,45 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:02.096360:Convert 176 DICOM as /out/sub-voice849/ses-1/anat/sub-voice849_ses-1_T2w_heudiconv106 (256x256x176x1)
+221007-18:40:05,307 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:05.307358:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/anat/sub-voice849_ses-1_T2w_heudiconv106.nii"
+221007-18:40:05,307 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:05.307358:Conversion required 6.035847 seconds (2.236422 for core code).
+221007-18:40:05,358 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 6.709144s.
+221007-18:40:08,787 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixwr5__h9k/convert".
+221007-18:40:08,990 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:40:12,708 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:12.708065:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:40:13,130 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:12.708065:Found 207 DICOM file(s)
+221007-18:40:13,131 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:12.708065:Warning: Slice timing appears corrupted (range 0..3137.5, TR=1640 ms)
+221007-18:40:13,131 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:12.708065:Convert 207 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-1_bold_heudiconv882 (72x72x45x207)
+221007-18:40:22,757 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:22.757811:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-1_bold_heudiconv882.nii"
+221007-18:40:23,158 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:22.757811:Conversion required 13.675625 seconds (1.182120 for core code).
+221007-18:40:23,209 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 14.217762s.
+221007-18:40:25,166 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixm68hhaqp/convert".
+221007-18:40:25,291 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:40:27,180 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:27.180780:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:40:27,181 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:27.180780:Found 207 DICOM file(s)
+221007-18:40:27,181 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:27.180780:Warning: Slice timing appears corrupted (range 0..3135, TR=1640 ms)
+221007-18:40:27,181 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:27.180780:Convert 207 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-2_bold_heudiconv922 (72x72x45x207)
+221007-18:40:35,608 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:35.608289:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-2_bold_heudiconv922.nii"
+221007-18:40:37,753 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:35.608289:Conversion required 9.777645 seconds (0.848008 for core code).
+221007-18:40:37,839 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 12.54771s.
+221007-18:40:40,489 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixle1je25h/convert".
+221007-18:40:41,0 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:40:41,634 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:41.634711:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:40:41,635 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:41.634711:Found 64 DICOM file(s)
+221007-18:40:41,635 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:41.634711:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221007-18:40:41,635 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:41.634711:Convert 64 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-1_bold_heudiconv482 (108x108x65x64)
+221007-18:40:50,604 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:50.604591:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-1_bold_heudiconv482.nii"
+221007-18:40:51,571 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:50.604591:Conversion required 9.415691 seconds (0.460460 for core code).
+221007-18:40:52,788 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 11.786053s.
+221007-18:40:55,984 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixc88upsv_/convert".
+221007-18:40:56,284 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:40:57,914 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:57.914037:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:40:57,914 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:57.914037:Found 64 DICOM file(s)
+221007-18:40:57,914 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:57.914037:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221007-18:40:57,914 nipype.interface INFO:
+	 stdout 2022-10-07T18:40:57.914037:Convert 64 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-2_bold_heudiconv415 (108x108x65x64)
+221007-18:41:07,533 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:07.533004:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-2_bold_heudiconv415.nii"
+221007-18:41:08,781 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:07.533004:Conversion required 10.902544 seconds (1.065606 for core code).
+221007-18:41:10,645 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 14.359987s.
+221007-18:41:13,160 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixbtx1yj80/convert".
+221007-18:41:13,848 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:41:18,489 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:18.488861:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:41:19,816 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:18.488861:Found 42 DICOM file(s)
+221007-18:41:19,817 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:18.488861:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221007-18:41:19,817 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:18.488861:Convert 42 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-1_bold_heudiconv589 (108x108x65x42)
+221007-18:41:24,118 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:24.118652:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-1_bold_heudiconv589.nii"
+221007-18:41:24,118 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:24.118652:Conversion required 8.852902 seconds (3.050581 for core code).
+221007-18:41:24,153 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 10.253896s.
+221007-18:41:25,459 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixm8enwnhu/convert".
+221007-18:41:28,751 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:41:35,750 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:35.750600:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:41:39,627 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:35.750600:Found 42 DICOM file(s)
+221007-18:41:39,627 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:35.750600:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221007-18:41:39,627 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:35.750600:Convert 42 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-2_bold_heudiconv578 (108x108x65x42)
+221007-18:41:42,646 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:42.646455:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-2_bold_heudiconv578.nii"
+221007-18:41:49,460 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:42.646455:Conversion required 8.786362 seconds (0.977991 for core code).
+221007-18:41:49,603 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 16.304458s.
+221007-18:41:52,33 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixy6mw5l8o/convert".
+221007-18:41:52,340 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:41:53,978 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:53.978592:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:41:53,979 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:53.978592:Found 42 DICOM file(s)
+221007-18:41:53,979 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:53.978592:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221007-18:41:53,979 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:53.978592:Convert 42 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-3_bold_heudiconv733 (108x108x65x42)
+221007-18:41:59,792 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:59.792192:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-3_bold_heudiconv733.nii"
+221007-18:41:59,931 nipype.interface INFO:
+	 stdout 2022-10-07T18:41:59.792192:Conversion required 6.564376 seconds (0.725779 for core code).
+221007-18:42:00,366 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 7.646178s.
+221007-18:42:03,907 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixa5tr7av5/convert".
+221007-18:42:06,584 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:42:18,440 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:18.440281:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:42:20,529 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:18.440281:Found 99 DICOM file(s)
+221007-18:42:20,529 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:18.440281:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+221007-18:42:20,529 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:18.440281:Convert 99 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-1_bold_heudiconv264 (108x108x65x99)
+221007-18:42:29,263 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:29.263606:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-1_bold_heudiconv264.nii"
+221007-18:42:33,626 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:29.263606:Conversion required 20.893381 seconds (4.536166 for core code).
+221007-18:42:33,785 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 27.199939s.
+221007-18:42:37,480 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixxnuc9ie3/convert".
+221007-18:42:38,125 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:42:40,885 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:40.885579:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:42:40,886 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:40.885579:Found 99 DICOM file(s)
+221007-18:42:40,886 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:40.885579:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+221007-18:42:40,886 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:40.885579:Convert 99 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-2_bold_heudiconv651 (108x108x65x99)
+221007-18:42:53,579 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:53.579913:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-2_bold_heudiconv651.nii"
+221007-18:42:54,681 nipype.interface INFO:
+	 stdout 2022-10-07T18:42:53.579913:Conversion required 15.365109 seconds (1.536853 for core code).
+221007-18:42:54,819 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 16.692546s.
+221007-18:43:01,245 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixvphg63bg/convert".
+221007-18:43:04,214 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:43:06,743 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:06.743643:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:43:06,744 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:06.743643:Found 48 DICOM file(s)
+221007-18:43:06,744 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:06.743643:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+221007-18:43:06,744 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:06.743643:Convert 48 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-1_bold_heudiconv376 (108x108x65x48)
+221007-18:43:12,349 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:12.349155:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-1_bold_heudiconv376.nii"
+221007-18:43:15,300 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:12.349155:Conversion required 7.813180 seconds (1.009527 for core code).
+221007-18:43:15,430 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 10.985553s.
+221007-18:43:17,294 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix0q8evuny/convert".
+221007-18:43:18,542 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:43:22,27 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:22.026994:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:43:24,467 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:22.026994:Found 48 DICOM file(s)
+221007-18:43:24,467 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:22.026994:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221007-18:43:24,467 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:22.026994:Convert 48 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-2_bold_heudiconv672 (108x108x65x48)
+221007-18:43:29,574 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:29.574844:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-2_bold_heudiconv672.nii"
+221007-18:43:29,840 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:29.574844:Conversion required 10.488231 seconds (2.576637 for core code).
+221007-18:43:29,890 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 11.190894s.
+221007-18:43:32,94 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix47blqmdf/convert".
+221007-18:43:33,713 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:43:38,546 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:38.546000:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:43:40,761 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:38.546000:Found 60 DICOM file(s)
+221007-18:43:40,761 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:38.546000:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221007-18:43:40,761 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:38.546000:Convert 60 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-1_bold_heudiconv140 (108x108x65x60)
+221007-18:43:46,306 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:46.306730:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-1_bold_heudiconv140.nii"
+221007-18:43:47,378 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:46.306730:Conversion required 10.906399 seconds (2.198958 for core code).
+221007-18:43:47,878 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 14.16373s.
+221007-18:43:49,501 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixgmpxt4kc/convert".
+221007-18:43:50,192 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:43:54,412 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:54.412530:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:43:57,80 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:54.412530:Found 60 DICOM file(s)
+221007-18:43:57,80 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:54.412530:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+221007-18:43:57,80 nipype.interface INFO:
+	 stdout 2022-10-07T18:43:54.412530:Convert 60 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-2_bold_heudiconv688 (108x108x65x60)
+221007-18:44:02,539 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:02.539556:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-2_bold_heudiconv688.nii"
+221007-18:44:03,736 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:02.539556:Conversion required 10.519195 seconds (2.028184 for core code).
+221007-18:44:03,845 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 13.157395s.
+221007-18:44:08,382 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix96lc9ifu/convert".
+221007-18:44:09,640 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:44:15,94 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:15.094761:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:44:18,271 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:15.094761:Found 101 DICOM file(s)
+221007-18:44:21,432 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:15.094761:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+221007-18:44:21,454 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:15.094761:Convert 101 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-1_bold_heudiconv212 (108x108x65x101)
+221007-18:44:27,673 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:27.673598:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-1_bold_heudiconv212.nii"
+221007-18:44:27,912 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:27.673598:Conversion required 16.678294 seconds (3.730164 for core code).
+221007-18:44:28,57 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 17.963678s.
+221007-18:44:32,902 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixn26qxb87/convert".
+221007-18:44:33,237 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:44:37,700 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:37.700508:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:44:42,817 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:37.700508:Found 101 DICOM file(s)
+221007-18:44:42,817 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:37.700508:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+221007-18:44:42,818 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:37.700508:Convert 101 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-2_bold_heudiconv805 (108x108x65x101)
+221007-18:44:51,803 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:51.803271:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-2_bold_heudiconv805.nii"
+221007-18:44:52,807 nipype.interface INFO:
+	 stdout 2022-10-07T18:44:51.803271:Conversion required 17.853111 seconds (2.879048 for core code).
+221007-18:44:53,89 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 19.850844s.
+221007-18:44:59,777 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixtjp0yo0u/convert".
+221007-18:45:01,70 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:45:09,752 nipype.interface INFO:
+	 stdout 2022-10-07T18:45:09.752284:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:45:13,436 nipype.interface INFO:
+	 stdout 2022-10-07T18:45:09.752284:Found 138 DICOM file(s)
+221007-18:45:13,436 nipype.interface INFO:
+	 stdout 2022-10-07T18:45:09.752284:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+221007-18:45:13,436 nipype.interface INFO:
+	 stdout 2022-10-07T18:45:09.752284:Convert 138 DICOM as /out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-movie_run-1_bold_heudiconv626 (108x108x65x138)
+221007-18:45:27,18 nipype.interface INFO:
+	 stdout 2022-10-07T18:45:27.018804:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice849/ses-1/func/sub-voice849_ses-1_task-movie_run-1_bold_heudiconv626.nii"
+221007-18:45:28,566 nipype.interface INFO:
+	 stdout 2022-10-07T18:45:27.018804:Conversion required 22.246670 seconds (4.428413 for core code).
+221007-18:45:33,889 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 31.32007s.
+add(ok): .heudiconv (file)
+add(error): sub-voice854/ses-1/func/sub-voice854_ses-1_task-nwr_run-2_bold_heudiconv058.json (file) [File unknown to git]
+add(error): sub-voice951/ses-1/dwi/sub-voice951_ses-1_acq-PA_dwi_heudiconv859.bval (file) [File unknown to git]
+add(error): sub-voice951/ses-1/dwi/sub-voice951_ses-1_acq-PA_dwi_heudiconv859.bvec (file) [File unknown to git]
+add(error): sub-voice951/ses-1/dwi/sub-voice951_ses-1_acq-PA_dwi_heudiconv859.json (file) [File unknown to git]
+add(error): sub-voice951/ses-1/dwi/sub-voice951_ses-1_acq-PA_dwi_heudiconv859.nii (file) [File unknown to git]
+add(error): sub-voice951/ses-1/dwi/sub-voice951_ses-1_acq-PA_dwi_heudiconv859.nii.gz (file) [File unknown to git]
+add(ok): sub-voice849/ses-1/anat/sub-voice849_ses-1_T2w.json (file)
+add(ok): sub-voice849/ses-1/anat/sub-voice849_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice849/ses-1/dwi/sub-voice849_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-1_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-2_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-1_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-2_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-facematch_run-2_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-movie_run-1_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-1_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-2_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice849/ses-1/func/sub-voice849_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice854/ses-1/anat/sub-voice854_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-nwr_run-1_bold.nii.gz (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-nwr_run-2_bold.nii.gz (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-pataka_run-2_bold.nii.gz (file)
+add(ok): sub-voice854/ses-1/func/sub-voice854_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice857/ses-1/anat/sub-voice857_ses-1_T2w.json (file)
+add(ok): sub-voice857/ses-1/anat/sub-voice857_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice857/ses-1/dwi/sub-voice857_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice857/ses-1/dwi/sub-voice857_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice857/ses-1/dwi/sub-voice857_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice857/ses-1/dwi/sub-voice857_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice857/ses-1/dwi/sub-voice857_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice857/ses-1/dwi/sub-voice857_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice857/ses-1/fmap/sub-voice857_ses-1_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-emosent_run-1_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-emosent_run-2_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-facematch_run-1_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-facematch_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-facematch_run-2_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-facematch_run-2_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-facematch_run-2_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-movie_run-1_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchnw_run-1_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchnw_run-2_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice857/ses-1/func/sub-voice857_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-emosent_run-2_bold.nii.gz (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-facematch_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-facematch_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-facematch_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-movie_run-1_bold.nii.gz (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchnw_run-1_bold.nii.gz (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchnw_run-2_bold.nii.gz (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice859/ses-1/func/sub-voice859_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-2_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-facematch_run-2_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-movie_run-1_bold.nii.gz (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchnw_run-1_bold.nii.gz (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchnw_run-2_bold.nii.gz (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice867/ses-1/func/sub-voice867_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice889/ses-2/func/sub-voice889_ses-2_task-movie_run-1_bold.json (file)
+add(ok): sub-voice889/ses-2/func/sub-voice889_ses-2_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice889/ses-2/func/sub-voice889_ses-2_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice893/ses-2/fmap/sub-voice893_ses-2_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice893/ses-2/fmap/sub-voice893_ses-2_acq-func_dir-AP_run-2_epi.nii.gz (file)
+add(ok): sub-voice893/ses-2/fmap/sub-voice893_ses-2_acq-func_dir-PA_run-1_epi.json (file)
+add(ok): sub-voice893/ses-2/fmap/sub-voice893_ses-2_acq-func_dir-PA_run-1_epi.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-emosent_run-1_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-emosent_run-2_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-1_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-2_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-3_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-pataka_run-1_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-pataka_run-2_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-rest_run-1_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-rest_run-1_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice893/ses-2/func/sub-voice893_ses-2_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/anat/sub-voice895_ses-1_T2w.json (file)
+add(ok): sub-voice895/ses-1/anat/sub-voice895_ses-1_T2w.nii.gz (file)
+add(ok): sub-voice895/ses-1/anat/sub-voice895_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice895/ses-1/anat/sub-voice895_ses-1_run-1_T1w.nii.gz (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-AP_dwi.nii.gz (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice895/ses-1/dwi/sub-voice895_ses-1_acq-PA_dwi.nii.gz (file)
+add(ok): sub-voice895/ses-1/fmap/sub-voice895_ses-1_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice895/ses-1/fmap/sub-voice895_ses-1_acq-func_dir-AP_run-2_epi.nii.gz (file)
+add(ok): sub-voice895/ses-1/fmap/sub-voice895_ses-1_acq-func_dir-PA_run-1_epi.json (file)
+add(ok): sub-voice895/ses-1/fmap/sub-voice895_ses-1_acq-func_dir-PA_run-1_epi.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-emosent_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-emosent_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-facematch_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-facematch_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-facematch_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-facematch_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-facematch_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-movie_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-3_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pataka_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pataka_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchnw_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchnw_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchsent_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchsent_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-rest_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-rest_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-rest_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice895/ses-1/func/sub-voice895_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice895/ses-1/sub-voice895_ses-1_scans.tsv (file)
+add(ok): sub-voice896/ses-1/anat/sub-voice896_ses-1_T2w.json (file)
+add(ok): sub-voice896/ses-1/anat/sub-voice896_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice896/ses-1/dwi/sub-voice896_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice896/ses-1/dwi/sub-voice896_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice896/ses-1/dwi/sub-voice896_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice896/ses-1/dwi/sub-voice896_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice896/ses-1/dwi/sub-voice896_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice896/ses-1/dwi/sub-voice896_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice896/ses-1/fmap/sub-voice896_ses-1_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice896/ses-1/fmap/sub-voice896_ses-1_acq-func_dir-PA_run-1_epi.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_bold.json (file)
+add(ok): sub-voice896/ses-1/func/sub-voice896_ses-1_task-rest_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/anat/sub-voice897_ses-1_T2w.json (file)
+add(ok): sub-voice897/ses-1/anat/sub-voice897_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice897/ses-1/dwi/sub-voice897_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-facematch_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice897/ses-1/func/sub-voice897_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice898/ses-1/anat/sub-voice898_ses-1_T2w.json (file)
+add(ok): sub-voice898/ses-1/anat/sub-voice898_ses-1_T2w.nii.gz (file)
+add(ok): sub-voice898/ses-1/anat/sub-voice898_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice898/ses-1/anat/sub-voice898_ses-1_run-1_T1w.nii.gz (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-AP_dwi.nii.gz (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice898/ses-1/dwi/sub-voice898_ses-1_acq-PA_dwi.nii.gz (file)
+add(ok): sub-voice898/ses-1/fmap/sub-voice898_ses-1_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice898/ses-1/fmap/sub-voice898_ses-1_acq-func_dir-AP_run-2_epi.nii.gz (file)
+add(ok): sub-voice898/ses-1/fmap/sub-voice898_ses-1_acq-func_dir-PA_run-1_epi.json (file)
+add(ok): sub-voice898/ses-1/fmap/sub-voice898_ses-1_acq-func_dir-PA_run-1_epi.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-facematch_run-1_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-1_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-2_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-nwr_run-3_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pataka_run-1_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pataka_run-2_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pitchsent_run-1_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pitchsent_run-2_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-rest_run-1_bold.json (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-rest_run-1_bold.nii.gz (file)
+add(ok): sub-voice898/ses-1/func/sub-voice898_ses-1_task-rest_run-1_events.tsv (file)
+add(ok): sub-voice898/ses-1/sub-voice898_ses-1_scans.tsv (file)
+add(ok): sub-voice950/ses-1/anat/sub-voice950_ses-1_run-1_T1w.json (file)
+add(ok): sub-voice950/ses-1/anat/sub-voice950_ses-1_run-1_T1w.nii.gz (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-AP_dwi.bval (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-AP_dwi.bvec (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-AP_dwi.json (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-AP_dwi.nii.gz (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice950/ses-1/dwi/sub-voice950_ses-1_acq-PA_dwi.nii.gz (file)
+add(ok): sub-voice950/ses-1/fmap/sub-voice950_ses-1_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice950/ses-1/fmap/sub-voice950_ses-1_acq-func_dir-AP_run-2_epi.nii.gz (file)
+add(ok): sub-voice950/ses-1/fmap/sub-voice950_ses-1_acq-func_dir-PA_run-1_epi.json (file)
+add(ok): sub-voice950/ses-1/fmap/sub-voice950_ses-1_acq-func_dir-PA_run-1_epi.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-emosent_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-emosent_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-emosent_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-emosent_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-emosent_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-emosent_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-facematch_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-facematch_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-facematch_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-facematch_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-facematch_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-facematch_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-movie_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-movie_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-movie_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-3_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-3_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-nwr_run-3_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pataka_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pataka_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pataka_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pataka_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pataka_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pataka_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchnw_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchnw_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchnw_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchnw_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchnw_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchnw_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchsent_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchsent_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchsent_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchsent_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchsent_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-pitchsent_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-rest_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-rest_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-rest_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-vowel_run-1_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-vowel_run-1_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-vowel_run-1_events.tsv (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-vowel_run-2_bold.json (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-vowel_run-2_bold.nii.gz (file)
+add(ok): sub-voice950/ses-1/func/sub-voice950_ses-1_task-vowel_run-2_events.tsv (file)
+add(ok): sub-voice950/ses-1/sub-voice950_ses-1_scans.tsv (file)
+add(ok): sub-voice951/ses-1/fmap/sub-voice951_ses-1_acq-func_dir-AP_run-2_epi.json (file)
+add(ok): sub-voice951/ses-1/fmap/sub-voice951_ses-1_acq-func_dir-AP_run-2_epi.nii.gz (file)
+add(ok): sub-voice951/ses-1/fmap/sub-voice951_ses-1_acq-func_dir-PA_run-1_epi.json (file)
+add(ok): sub-voice951/ses-1/fmap/sub-voice951_ses-1_acq-func_dir-PA_run-1_epi.nii.gz (file)
+add(ok): sub-voice951/ses-1/func/sub-voice951_ses-1_task-rest_run-1_bold.json (file)
+add(ok): sub-voice951/ses-1/func/sub-voice951_ses-1_task-rest_run-1_bold.nii.gz (file)
+add(ok): sub-voice951/ses-1/sub-voice951_ses-1_scans.tsv (file)
+add(ok): participants.tsv (file)
+add(ok): sub-voice867/ses-1/sub-voice867_ses-1_scans.tsv (file)
+add(ok): task-nwr_bold.json (file)

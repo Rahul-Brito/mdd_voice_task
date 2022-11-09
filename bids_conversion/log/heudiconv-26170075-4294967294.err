@@ -1,0 +1,21 @@
+INFO: Running heudiconv version 0.11.3+d20220512 latest 0.11.4
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/bin/heudiconv", line 33, in <module>
+    sys.exit(load_entry_point('heudiconv', 'console_scripts', 'heudiconv')())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 24, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 329, in workflow
+    subjs, grouping=grouping)
+  File "/src/heudiconv/heudiconv/parser.py", line 144, in get_study_sessions
+    for session_, files_ in get_extracted_dicoms(files):
+  File "/src/heudiconv/heudiconv/parser.py", line 90, in get_extracted_dicoms
+    if not tarfile.is_tarfile(t):
+  File "/opt/miniconda-latest/lib/python3.7/tarfile.py", line 2442, in is_tarfile
+    t = open(name)
+  File "/opt/miniconda-latest/lib/python3.7/tarfile.py", line 1575, in open
+    return func(name, "r", fileobj, **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/tarfile.py", line 1639, in gzopen
+    fileobj = GzipFile(name, mode + "b", compresslevel, fileobj)
+  File "/opt/miniconda-latest/lib/python3.7/gzip.py", line 168, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/om2/scratch/Wed/rfbrito/dicom/voice872/session001_visit001/dicom/TrioTim-35115-20150711-142529-531000/531000-1-1.dcm'

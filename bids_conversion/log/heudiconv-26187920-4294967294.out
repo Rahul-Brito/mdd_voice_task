@@ -1,0 +1,38 @@
+Submitited subject: voice000
+Submitted session: 1
+Command:
+singularity run -B /om2/scratch/Wed/rfbrito/dicom -B /om2/user/rfbrito/voice_depression/bids_conversion -B /om2/scratch/Wed/rfbrito/bids:/out /om2/user/rfbrito/containers/imaging/heudiconv_latest.sif -d /om2/scratch/Wed/rfbrito/dicom/{subject}/session001*/dicom/Trio*/*.dcm -o /out -f /om2/user/rfbrito/voice_depression/bids_conversion/heuristic.py -c dcm2niix -s voice000 -ss 1 -b --minmeta -g accession_number
+[]
+[]
+[{'item': '4-SMS2-diff_b1000_free_11b0_61dirs_PA_1.8iso', 'acq': 'PA'}]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+221012-23:30:08,667 nipype.utils WARNING:
+	 A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+221012-23:30:08,672 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix8_lmupjg/convert".
+221012-23:30:08,702 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221012-23:30:10,229 nipype.interface INFO:
+	 stdout 2022-10-12T23:30:10.229182:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221012-23:30:10,229 nipype.interface INFO:
+	 stdout 2022-10-12T23:30:10.229182:Found 72 DICOM file(s)
+221012-23:30:10,229 nipype.interface INFO:
+	 stdout 2022-10-12T23:30:10.229182:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=6300 ms)
+221012-23:30:10,229 nipype.interface INFO:
+	 stdout 2022-10-12T23:30:10.229182:Convert 72 DICOM as /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi_heudiconv388 (120x120x82x72)
+221012-23:30:22,827 nipype.interface INFO:
+	 stdout 2022-10-12T23:30:22.827492:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi_heudiconv388.nii"
+221012-23:30:22,828 nipype.interface INFO:
+	 stdout 2022-10-12T23:30:22.827492:Conversion required 14.025794 seconds (0.368918 for core code).
+221012-23:30:23,6 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 14.216548s.
+DONE

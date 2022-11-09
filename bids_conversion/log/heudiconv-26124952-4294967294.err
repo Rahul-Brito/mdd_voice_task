@@ -1,0 +1,19 @@
+INFO: Running heudiconv version 0.11.3+d20220512 latest 0.11.4
+INFO: Need to process 1 study sessions
+INFO: PROCESSING STARTS: {'subject': 'voice000', 'outdir': '/out/', 'session': '1'}
+INFO: Processing 792 dicoms
+INFO: Reloading existing filegroup.json because /out/.heudiconv/voice000/ses-1/info/voice000_ses-1.edit.txt exists
+INFO: Doing conversion using dcm2niix
+INFO: Converting /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi (72 DICOMs) -> /out/sub-voice000/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/bin/heudiconv", line 33, in <module>
+    sys.exit(load_entry_point('heudiconv', 'console_scripts', 'heudiconv')())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 24, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 393, in workflow
+    grouping=grouping,)
+  File "/src/heudiconv/heudiconv/convert.py", line 217, in prep_conversion
+    dcmconfig=dcmconfig,)
+  File "/src/heudiconv/heudiconv/convert.py", line 553, in convert
+    % (outname)
+RuntimeError: was asked to convert into /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.nii.gz but destination already exists

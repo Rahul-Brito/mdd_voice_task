@@ -1,0 +1,91 @@
+Submitited subject: voice000
+Submitted session: 1
+Command:
+singularity run -B /mindhive -B /om2/user/rfbrito/voice_depression/bids_conversion -B /om2/scratch/Wed/rfbrito/bids:/out /om2/user/rfbrito/containers/imaging/heudiconv_latest.sif -d /mindhive/xnat/dicom_storage/voice/dicom/{subject}/session001*/dicom/Trio*/*.dcm -o /out -f /om2/user/rfbrito/voice_depression/bids_conversion/heuristic.py -c dcm2niix -s voice000 -ss 1 --datalad -b --minmeta -g accession_number
+create(ok): /out (dataset)
+add(ok): .gitattributes (file)
+save(ok): . (dataset)
+action summary:
+  add (ok: 1)
+  save (ok: 1)
+[]
+[]
+[{'item': '4-SMS2-diff_b1000_free_11b0_61dirs_PA_1.8iso', 'acq': 'PA'}]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+221007-18:22:30,322 nipype.utils WARNING:
+	 A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+221007-18:22:30,332 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niix175r0tde/convert".
+221007-18:22:30,396 nipype.workflow INFO:
+	 [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+221007-18:22:33,173 nipype.interface INFO:
+	 stdout 2022-10-07T18:22:33.173518:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+221007-18:22:33,174 nipype.interface INFO:
+	 stdout 2022-10-07T18:22:33.173518:Found 72 DICOM file(s)
+221007-18:22:33,174 nipype.interface INFO:
+	 stdout 2022-10-07T18:22:33.173518:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=6300 ms)
+221007-18:22:33,174 nipype.interface INFO:
+	 stdout 2022-10-07T18:22:33.173518:Convert 72 DICOM as /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi_heudiconv712 (120x120x82x72)
+221007-18:22:46,920 nipype.interface INFO:
+	 stdout 2022-10-07T18:22:46.919933:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi_heudiconv712.nii"
+221007-18:22:46,920 nipype.interface INFO:
+	 stdout 2022-10-07T18:22:46.919933:Conversion required 16.394479 seconds (0.549319 for core code).
+221007-18:22:46,968 nipype.workflow INFO:
+	 [Node] Finished "convert", elapsed time 16.462925s.
+add(ok): .heudiconv (file)
+add(ok): .gitmodules (file)
+save(ok): . (dataset)
+create(ok): .heudiconv (dataset)
+action summary:
+  add (ok: 2)
+  create (ok: 1)
+  save (ok: 1)
+add(ok): voice000/ses-1/info/dicominfo_ses-1.tsv (file)
+add(ok): voice000/ses-1/info/filegroup_ses-1.json (file)
+add(ok): voice000/ses-1/info/heuristic.py (file)
+add(ok): voice000/ses-1/info/voice000_ses-1.auto.txt (file)
+add(ok): voice000/ses-1/info/voice000_ses-1.edit.txt (file)
+add(ok): voice844/ses-1/info/heuristic.py (file)
+add(ok): voice846/ses-1/info/heuristic.py (file)
+add(ok): voice852/ses-1/info/heuristic.py (file)
+add(ok): voice856/ses-1/info/heuristic.py (file)
+save(ok): .heudiconv (dataset)
+add(ok): .heudiconv (file)
+add(ok): CHANGES (file)
+add(ok): README (file)
+add(ok): dataset_description.json (file)
+add(ok): participants.json (file)
+add(ok): participants.tsv (file)
+add(ok): scans.json (file)
+add(ok): sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.bval (file)
+add(ok): sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.bvec (file)
+add(ok): sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.json (file)
+add(ok): sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.nii.gz (file)
+add(ok): sub-voice000/ses-1/sub-voice000_ses-1_scans.tsv (file)
+save(ok): . (dataset)
+action summary:
+  add (ok: 21)
+  save (ok: 2)
+add(ok): voice850/ses-1/info/heuristic.py (file)
+add(ok): voice852/ses-1/info/dicominfo_ses-1.tsv (file)
+add(ok): voice852/ses-1/info/filegroup_ses-1.json (file)
+add(ok): voice852/ses-1/info/voice852_ses-1.auto.txt (file)
+add(ok): voice852/ses-1/info/voice852_ses-1.edit.txt (file)
+save(ok): .heudiconv (dataset)
+add(ok): .heudiconv (file)
+add(ok): sub-voice852/ses-1/func/sub-voice852_ses-1_task-rest_run-1_bold_heudiconv044.json (file)
+add(ok): sub-voice852/ses-1/func/sub-voice852_ses-1_task-rest_run-1_bold_heudiconv044.nii (file)
+add(ok): sub-voice852/ses-1/func/sub-voice852_ses-1_task-rest_run-1_bold_heudiconv044.nii.gz (file)
+save(ok): . (dataset)
+action summary:
+  add (ok: 9)
+  save (ok: 2)

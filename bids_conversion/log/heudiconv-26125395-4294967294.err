@@ -1,0 +1,289 @@
+INFO: Running heudiconv version 0.11.3+d20220512 latest 0.11.4
+INFO: Need to process 1 study sessions
+INFO: PROCESSING STARTS: {'subject': 'voice983', 'outdir': '/out/', 'session': '1'}
+INFO: Processing 4500 dicoms
+INFO: Analyzing 4500 dicoms
+INFO: Generated sequence info for 42 accession numbers with 4500 entries total
+INFO: Doing conversion using dcm2niix
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-rest_run-1_bold (300 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+WARNING: A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix7i6yf22b/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T19:59:17.836952:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T19:59:17.836952:Found 300 DICOM file(s)
+INFO: stdout 2022-10-07T19:59:17.836952:Warning: Slice timing appears corrupted (range 0..5357.5, TR=1090 ms)
+INFO: stdout 2022-10-07T19:59:17.836952:Convert 300 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-rest_run-1_bold_heudiconv761 (108x108x65x300)
+INFO: stdout 2022-10-07T19:59:51.882379:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-rest_run-1_bold_heudiconv761.nii"
+INFO: stdout 2022-10-07T19:59:51.882379:Conversion required 35.167338 seconds (1.342290 for core code).
+INFO: [Node] Finished "convert", elapsed time 35.257552s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-rest_run-1_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-PA_run-1_epi (260 DICOMs) -> /out/sub-voice983/ses-1/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix4042tlc0/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T19:59:53.262376:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T19:59:53.262376:Found 260 DICOM file(s)
+INFO: stdout 2022-10-07T19:59:53.262376:Convert 260 DICOM as /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-PA_run-1_epi_heudiconv500 (108x108x65x4)
+INFO: stdout 2022-10-07T19:59:53.898178:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-PA_run-1_epi_heudiconv500.nii"
+INFO: stdout 2022-10-07T19:59:53.898178:Conversion required 1.161826 seconds (0.357954 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.235534s.
+WARNING: Failed to find task field in /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-PA_run-1_epi.json.
+INFO: Post-treating /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-PA_run-1_epi.json file
+INFO: Converting /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-AP_run-2_epi (260 DICOMs) -> /out/sub-voice983/ses-1/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixrwg7ch_3/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T19:59:54.886840:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T19:59:54.886840:Found 260 DICOM file(s)
+INFO: stdout 2022-10-07T19:59:54.886840:Convert 260 DICOM as /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-AP_run-2_epi_heudiconv834 (108x108x65x4)
+INFO: stdout 2022-10-07T19:59:55.637876:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-AP_run-2_epi_heudiconv834.nii"
+INFO: stdout 2022-10-07T19:59:55.637876:Conversion required 1.181366 seconds (0.280032 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.284905s.
+WARNING: Failed to find task field in /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-AP_run-2_epi.json.
+INFO: Post-treating /out/sub-voice983/ses-1/fmap/sub-voice983_ses-1_acq-func_dir-AP_run-2_epi.json file
+INFO: Converting /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-PA_dwi (72 DICOMs) -> /out/sub-voice983/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix07y05h7i/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T19:59:57.413741:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T19:59:57.413741:Found 72 DICOM file(s)
+INFO: stdout 2022-10-07T19:59:57.413741:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+INFO: stdout 2022-10-07T19:59:57.413741:Convert 72 DICOM as /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-PA_dwi_heudiconv345 (120x120x66x72)
+INFO: stdout 2022-10-07T20:00:07.386076:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-PA_dwi_heudiconv345.nii"
+INFO: stdout 2022-10-07T20:00:07.386076:Conversion required 11.130535 seconds (0.446652 for core code).
+INFO: [Node] Finished "convert", elapsed time 11.315532s.
+WARNING: Failed to find task field in /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-PA_dwi.json.
+INFO: Post-treating /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-PA_dwi.json file
+INFO: Converting /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-AP_dwi (7 DICOMs) -> /out/sub-voice983/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixoq8ykvyp/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:08.120961:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:08.120961:Found 7 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:08.120961:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=4400 ms)
+INFO: stdout 2022-10-07T20:00:08.120961:Convert 7 DICOM as /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-AP_dwi_heudiconv022 (120x120x66x7)
+INFO: stdout 2022-10-07T20:00:09.351136:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-AP_dwi_heudiconv022.nii"
+INFO: stdout 2022-10-07T20:00:09.351136:Conversion required 1.614316 seconds (0.063873 for core code).
+INFO: [Node] Finished "convert", elapsed time 1.699237s.
+WARNING: Failed to find task field in /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-AP_dwi.json.
+INFO: Post-treating /out/sub-voice983/ses-1/dwi/sub-voice983_ses-1_acq-AP_dwi.json file
+INFO: Converting /out/sub-voice983/ses-1/anat/sub-voice983_ses-1_run-1_T1w (176 DICOMs) -> /out/sub-voice983/ses-1/anat . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixrr6phenh/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:10.401319:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:10.401319:Found 176 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:10.401319:Convert 176 DICOM as /out/sub-voice983/ses-1/anat/sub-voice983_ses-1_run-1_T1w_heudiconv902 (256x256x176x1)
+INFO: stdout 2022-10-07T20:00:12.457620:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/anat/sub-voice983_ses-1_run-1_T1w_heudiconv902.nii"
+INFO: stdout 2022-10-07T20:00:12.457620:Conversion required 2.365423 seconds (0.407138 for core code).
+INFO: [Node] Finished "convert", elapsed time 2.490954s.
+WARNING: Failed to find task field in /out/sub-voice983/ses-1/anat/sub-voice983_ses-1_run-1_T1w.json.
+INFO: Post-treating /out/sub-voice983/ses-1/anat/sub-voice983_ses-1_run-1_T1w.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-1_bold (207 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixnot54734/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:13.810484:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:13.810484:Found 207 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:13.810484:Warning: Slice timing appears corrupted (range 0..3135, TR=1640 ms)
+INFO: stdout 2022-10-07T20:00:13.810484:Convert 207 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-1_bold_heudiconv165 (72x72x45x207)
+INFO: stdout 2022-10-07T20:00:21.298019:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-1_bold_heudiconv165.nii"
+INFO: stdout 2022-10-07T20:00:21.298019:Conversion required 8.058350 seconds (0.509439 for core code).
+INFO: [Node] Finished "convert", elapsed time 8.2048s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-1_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-2_bold (207 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixp7gz84fs/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:22.528257:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:22.528257:Found 207 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:22.528257:Warning: Slice timing appears corrupted (range 0..3135, TR=1640 ms)
+INFO: stdout 2022-10-07T20:00:22.528257:Convert 207 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-2_bold_heudiconv274 (72x72x45x207)
+INFO: stdout 2022-10-07T20:00:29.809574:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-2_bold_heudiconv274.nii"
+INFO: stdout 2022-10-07T20:00:29.809574:Conversion required 7.793253 seconds (0.422142 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.92421s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pataka_run-2_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-1_bold (39 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixv1fto7u0/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:30.352717:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:30.352717:Found 39 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:30.352717:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T20:00:30.352717:Convert 39 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-1_bold_heudiconv463 (108x108x65x39)
+INFO: stdout 2022-10-07T20:00:34.815017:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-1_bold_heudiconv463.nii"
+INFO: stdout 2022-10-07T20:00:34.815017:Conversion required 4.659749 seconds (0.185270 for core code).
+INFO: [Node] Finished "convert", elapsed time 4.741584s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-1_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-2_bold (64 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixemuie9l4/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:35.451231:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:35.451231:Found 64 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:35.451231:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T20:00:35.451231:Convert 64 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-2_bold_heudiconv039 (108x108x65x64)
+INFO: stdout 2022-10-07T20:00:42.547583:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-2_bold_heudiconv039.nii"
+INFO: stdout 2022-10-07T20:00:42.547583:Conversion required 7.422995 seconds (0.362106 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.523443s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-2_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-3_bold (64 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixwur2_2zk/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:43.320530:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:43.320530:Found 64 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:43.320530:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T20:00:43.320530:Convert 64 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-3_bold_heudiconv073 (108x108x65x64)
+INFO: stdout 2022-10-07T20:00:51.323325:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-3_bold_heudiconv073.nii"
+INFO: stdout 2022-10-07T20:00:51.323325:Conversion required 8.341060 seconds (0.322391 for core code).
+INFO: [Node] Finished "convert", elapsed time 8.434839s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchsent_run-3_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-1_bold (48 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixvpbjg4qo/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:51.934957:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:51.934957:Found 48 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:51.934957:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T20:00:51.934957:Convert 48 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-1_bold_heudiconv327 (108x108x65x48)
+INFO: stdout 2022-10-07T20:00:57.419008:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-1_bold_heudiconv327.nii"
+INFO: stdout 2022-10-07T20:00:57.419008:Conversion required 5.744967 seconds (0.240812 for core code).
+INFO: [Node] Finished "convert", elapsed time 5.87235s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-1_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-2_bold (48 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixw_hn5gi_/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:00:58.432617:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:00:58.432617:Found 48 DICOM file(s)
+INFO: stdout 2022-10-07T20:00:58.432617:Warning: Slice timing appears corrupted (range 0..5360, TR=4000 ms)
+INFO: stdout 2022-10-07T20:00:58.432617:Convert 48 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-2_bold_heudiconv587 (108x108x65x48)
+INFO: stdout 2022-10-07T20:01:03.940599:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-2_bold_heudiconv587.nii"
+INFO: stdout 2022-10-07T20:01:03.940599:Conversion required 5.971141 seconds (0.221914 for core code).
+INFO: [Node] Finished "convert", elapsed time 6.1763s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-emosent_run-2_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-1_bold (60 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixzj4u68cc/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:01:04.992516:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:01:04.992516:Found 60 DICOM file(s)
+INFO: stdout 2022-10-07T20:01:04.992516:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T20:01:04.992516:Convert 60 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-1_bold_heudiconv768 (108x108x65x60)
+INFO: stdout 2022-10-07T20:01:12.033224:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-1_bold_heudiconv768.nii"
+INFO: stdout 2022-10-07T20:01:12.033224:Conversion required 7.321191 seconds (0.288862 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.419741s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-1_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-2_bold (60 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixq9qqnarp/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:01:13.000699:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:01:13.000699:Found 60 DICOM file(s)
+INFO: stdout 2022-10-07T20:01:13.000699:Warning: Slice timing appears corrupted (range 0..5357.5, TR=4000 ms)
+INFO: stdout 2022-10-07T20:01:13.000699:Convert 60 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-2_bold_heudiconv183 (108x108x65x60)
+INFO: stdout 2022-10-07T20:01:20.255176:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-2_bold_heudiconv183.nii"
+INFO: stdout 2022-10-07T20:01:20.255176:Conversion required 7.651389 seconds (0.301470 for core code).
+INFO: [Node] Finished "convert", elapsed time 7.764451s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-vowel_run-2_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-1_bold (101 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixegb8oume/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:01:21.601864:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:01:21.601864:Found 101 DICOM file(s)
+INFO: stdout 2022-10-07T20:01:21.601864:Warning: Slice timing appears corrupted (range 0..5357.5, TR=2000 ms)
+INFO: stdout 2022-10-07T20:01:21.601864:Convert 101 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-1_bold_heudiconv009 (108x108x65x101)
+INFO: stdout 2022-10-07T20:01:33.409847:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-1_bold_heudiconv009.nii"
+INFO: stdout 2022-10-07T20:01:33.409847:Conversion required 12.449451 seconds (0.484696 for core code).
+INFO: [Node] Finished "convert", elapsed time 12.53697s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-1_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-2_bold (101 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix7b8l_2_3/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:01:34.735021:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:01:34.735021:Found 101 DICOM file(s)
+INFO: stdout 2022-10-07T20:01:34.735021:Warning: Slice timing appears corrupted (range 0..5360, TR=2000 ms)
+INFO: stdout 2022-10-07T20:01:34.735021:Convert 101 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-2_bold_heudiconv124 (108x108x65x101)
+INFO: stdout 2022-10-07T20:01:46.675493:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-2_bold_heudiconv124.nii"
+INFO: stdout 2022-10-07T20:01:46.675493:Conversion required 12.610347 seconds (0.486027 for core code).
+INFO: [Node] Finished "convert", elapsed time 12.762045s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-pitchnw_run-2_bold.json file
+INFO: Converting /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-movie_run-1_bold (138 DICOMs) -> /out/sub-voice983/ses-1/func . Converter: dcm2niix . Output types: ('nii.gz',)
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixc05d1eoo/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T20:01:48.144034:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T20:01:48.144034:Found 138 DICOM file(s)
+INFO: stdout 2022-10-07T20:01:48.144034:Warning: Slice timing appears corrupted (range 0..5360, TR=1090 ms)
+INFO: stdout 2022-10-07T20:01:48.144034:Convert 138 DICOM as /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-movie_run-1_bold_heudiconv945 (108x108x65x138)
+INFO: stdout 2022-10-07T20:02:04.973800:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-movie_run-1_bold_heudiconv945.nii"
+INFO: stdout 2022-10-07T20:02:04.973800:Conversion required 17.520926 seconds (0.622160 for core code).
+INFO: [Node] Finished "convert", elapsed time 17.739504s.
+INFO: Post-treating /out/sub-voice983/ses-1/func/sub-voice983_ses-1_task-movie_run-1_bold.json file
+WARNING: Existing lockfile found in /out/heudiconv.lock - waiting for the lock to be released. To set a timeout limit, set the HEUDICONV_FILELOCK_TIMEOUT environmental variable to a value in seconds. If this process hangs, it may require a manual deletion of the /out/heudiconv.lock.
+INFO: Populating template files under /out/
+INFO: PROCESSING DONE: {'subject': 'voice983', 'outdir': '/out/', 'session': '1'}
+INFO: Total: starting
+INFO: 
+INFO: Total: processed result for /out
+INFO: Total: done
+INFO: Total: starting
+[WARNING] Received an exception CommandError(CommandError: 'git -c diff.ignoreSubmodules=none annex add --json --json-error-messages -c annex.dotfiles=true -- voice969/ses-1/info/dicominfo_ses-1.tsv voice969/ses-1/info/filegroup_ses-1.json voice969/ses-1/info/voice969_ses-1.auto.txt voice969/ses-1/info/voice969_ses-1.edit.txt voice975/ses-1/info/dicominfo_ses-1.tsv voice975/ses-1/info/filegroup_ses-1.json voice975/ses-1/info/voice975_ses-1.auto.txt voice975/ses-1/info/voice975_ses-1.edit.txt voice980/ses-1/info/dicominfo_ses-1.tsv voice980/ses-1/info/filegroup_ses-1.json voice980/ses-1/info/heuristic.py voice980/ses-1/info/voice980_ses-1.auto.txt voice980/ses-1/info/voice980_ses-1.edit.txt voice981/ses-1/info/dicominfo_ses-1.tsv voice981/ses-1/info/filegroup_ses-1.json voice981/ses-1/info/voice981_ses-1.auto.txt voice981/ses-1/info/voice981_ses-1.edit.txt voice983/ses-1/info/dicominfo_ses-1.tsv voice983/ses-1/info/filegroup_ses-1.json voice983/ses-1/info/heuristic.py voice983/ses-1/info/voice983_ses-1.auto.txt voice983/ses-1/info/voice983_ses-1.edit.txt' failed with exitcode 1 under /out/.heudiconv [info keys: stdout_json]
+>git-annex: .git/annex/othertmp/ingest1447-5: rename: permission denied (Permission denied)
+> git-annex: voice980/ses-1/info/filegroup_ses-1.json: removeLink: does not exist (No such file or directory) [err: 'add: 2 failed']). Canceling not-yet running jobs and waiting for completion of running. You can force earlier forceful exit by Ctrl-C. 
+WARNING: Received an exception CommandError(CommandError: 'git -c diff.ignoreSubmodules=none annex add --json --json-error-messages -c annex.dotfiles=true -- voice969/ses-1/info/dicominfo_ses-1.tsv voice969/ses-1/info/filegroup_ses-1.json voice969/ses-1/info/voice969_ses-1.auto.txt voice969/ses-1/info/voice969_ses-1.edit.txt voice975/ses-1/info/dicominfo_ses-1.tsv voice975/ses-1/info/filegroup_ses-1.json voice975/ses-1/info/voice975_ses-1.auto.txt voice975/ses-1/info/voice975_ses-1.edit.txt voice980/ses-1/info/dicominfo_ses-1.tsv voice980/ses-1/info/filegroup_ses-1.json voice980/ses-1/info/heuristic.py voice980/ses-1/info/voice980_ses-1.auto.txt voice980/ses-1/info/voice980_ses-1.edit.txt voice981/ses-1/info/dicominfo_ses-1.tsv voice981/ses-1/info/filegroup_ses-1.json voice981/ses-1/info/voice981_ses-1.auto.txt voice981/ses-1/info/voice981_ses-1.edit.txt voice983/ses-1/info/dicominfo_ses-1.tsv voice983/ses-1/info/filegroup_ses-1.json voice983/ses-1/info/heuristic.py voice983/ses-1/info/voice983_ses-1.auto.txt voice983/ses-1/info/voice983_ses-1.edit.txt' failed with exitcode 1 under /out/.heudiconv [info keys: stdout_json]
+>git-annex: .git/annex/othertmp/ingest1447-5: rename: permission denied (Permission denied)
+> git-annex: voice980/ses-1/info/filegroup_ses-1.json: removeLink: does not exist (No such file or directory) [err: 'add: 2 failed']). Canceling not-yet running jobs and waiting for completion of running. You can force earlier forceful exit by Ctrl-C.
+[INFO] Canceled 0 out of 0 jobs. 0 left running. 
+INFO: Canceled 0 out of 0 jobs. 0 left running.
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 368, in _iter_threads
+    raise _FinalShutdown()
+datalad.support.parallel._FinalShutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/bin/heudiconv", line 33, in <module>
+    sys.exit(load_entry_point('heudiconv', 'console_scripts', 'heudiconv')())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 24, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 406, in workflow
+    add_to_datalad(outdir, study_outdir, msg, bids_options)
+  File "/src/heudiconv/heudiconv/external/dlad.py", line 125, in add_to_datalad
+    ds.save('.', recursive=True
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/distribution/dataset.py", line 502, in apply_func
+    return f(*args, **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 447, in eval_func
+    return return_func(*args, **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 439, in return_func
+    results = list(results)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 369, in generator_func
+    allkwargs):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/interface/utils.py", line 544, in _process_results
+    for res in results:
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/core/local/save.py", line 398, in __call__
+    lgr=lgr,
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 535, in __iter__
+    for res in super().__iter__():
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 265, in __iter__
+    yield from self._iter_threads(self._jobs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 417, in _iter_threads
+    self.shutdown(force=True, exception=self._producer_exception or interrupted_by_exception)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 233, in shutdown
+    raise exception
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 383, in _iter_threads
+    self._pop_done_futures(lgr) or sleeper()
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 463, in _pop_done_futures
+    raise exception
+  File "/opt/miniconda-latest/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/parallel.py", line 329, in consumer_worker
+    for r in res:
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/core/local/save.py", line 322, in save_ds
+    amend=amend):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/gitrepo.py", line 3467, in save_
+    **{k: kwargs[k] for k in kwargs
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/annexrepo.py", line 3507, in _save_add
+    if expected_additions else None):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/annexrepo.py", line 1079, in _call_annex_records
+    raise e
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/annexrepo.py", line 1051, in _call_annex_records
+    **kwargs,
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/support/annexrepo.py", line 944, in _call_annex
+    **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/runner/gitrunner.py", line 227, in run_on_filelist_chunks
+    **kwargs):
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/runner/gitrunner.py", line 161, in _get_chunked_results
+    **kwargs)
+  File "/opt/miniconda-latest/lib/python3.7/site-packages/datalad/runner/runner.py", line 205, in run
+    **results,
+datalad.runner.exception.CommandError: CommandError: 'git -c diff.ignoreSubmodules=none annex add --json --json-error-messages -c annex.dotfiles=true -- voice969/ses-1/info/dicominfo_ses-1.tsv voice969/ses-1/info/filegroup_ses-1.json voice969/ses-1/info/voice969_ses-1.auto.txt voice969/ses-1/info/voice969_ses-1.edit.txt voice975/ses-1/info/dicominfo_ses-1.tsv voice975/ses-1/info/filegroup_ses-1.json voice975/ses-1/info/voice975_ses-1.auto.txt voice975/ses-1/info/voice975_ses-1.edit.txt voice980/ses-1/info/dicominfo_ses-1.tsv voice980/ses-1/info/filegroup_ses-1.json voice980/ses-1/info/heuristic.py voice980/ses-1/info/voice980_ses-1.auto.txt voice980/ses-1/info/voice980_ses-1.edit.txt voice981/ses-1/info/dicominfo_ses-1.tsv voice981/ses-1/info/filegroup_ses-1.json voice981/ses-1/info/voice981_ses-1.auto.txt voice981/ses-1/info/voice981_ses-1.edit.txt voice983/ses-1/info/dicominfo_ses-1.tsv voice983/ses-1/info/filegroup_ses-1.json voice983/ses-1/info/heuristic.py voice983/ses-1/info/voice983_ses-1.auto.txt voice983/ses-1/info/voice983_ses-1.edit.txt' failed with exitcode 1 under /out/.heudiconv [info keys: stdout_json]
+>git-annex: .git/annex/othertmp/ingest1447-5: rename: permission denied (Permission denied)
+> git-annex: voice980/ses-1/info/filegroup_ses-1.json: removeLink: does not exist (No such file or directory) [err: 'add: 2 failed']

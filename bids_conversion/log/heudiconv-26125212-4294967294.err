@@ -1,0 +1,153 @@
+INFO: Running heudiconv version 0.11.3+d20220512 latest 0.11.4
+INFO: Need to process 1 study sessions
+INFO: Initiating Dataset(/out)
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: starting
+INFO: 
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: done
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: starting
+INFO: 
+INFO: Total: processed result for /out
+INFO: Total: done
+INFO: Total: starting
+INFO: 
+INFO: Total: processed result for /out
+INFO: Total: done
+INFO: PROCESSING STARTS: {'subject': 'voice000', 'outdir': '/out/', 'session': '1'}
+INFO: Processing 792 dicoms
+INFO: Analyzing 792 dicoms
+INFO: Generated sequence info for 9 accession numbers with 792 entries total
+INFO: Doing conversion using dcm2niix
+INFO: Converting /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi (72 DICOMs) -> /out/sub-voice000/ses-1/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+WARNING: A newer version (1.8.4) of nipy/nipype is available. You are using 1.8.0
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix175r0tde/convert".
+INFO: [Node] Executing "convert" <nipype.interfaces.dcm2nii.Dcm2niix>
+INFO: stdout 2022-10-07T18:22:33.173518:Chris Rorden's dcm2niiX version v1.0.20211006  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2022-10-07T18:22:33.173518:Found 72 DICOM file(s)
+INFO: stdout 2022-10-07T18:22:33.173518:Warning: Slice timing appears corrupted (range 0..8.63999e+07, TR=6300 ms)
+INFO: stdout 2022-10-07T18:22:33.173518:Convert 72 DICOM as /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi_heudiconv712 (120x120x82x72)
+INFO: stdout 2022-10-07T18:22:46.919933:Compress: "/usr/bin/pigz" -b 960 -n -f -6 "/out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi_heudiconv712.nii"
+INFO: stdout 2022-10-07T18:22:46.919933:Conversion required 16.394479 seconds (0.549319 for core code).
+INFO: [Node] Finished "convert", elapsed time 16.462925s.
+WARNING: Failed to find task field in /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.json.
+INFO: Post-treating /out/sub-voice000/ses-1/dwi/sub-voice000_ses-1_acq-PA_dwi.json file
+INFO: Populating template files under /out/
+INFO: PROCESSING DONE: {'subject': 'voice000', 'outdir': '/out/', 'session': '1'}
+INFO: Total: starting
+INFO: 
+INFO: Total: processed result for /out
+INFO: Total: done
+INFO: Total: starting
+INFO: 
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: done
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: starting
+INFO: 
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out/.heudiconv
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: done
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: starting
+INFO: 
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out/.heudiconv
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: processed result for /out
+INFO: Clear progress bars
+INFO: Refresh progress bars
+INFO: Total: done
+INFO: Clear progress bars
+INFO: Refresh progress bars
+Traceback (most recent call last):
+  File "/opt/miniconda-latest/bin/heudiconv", line 33, in <module>
+    sys.exit(load_entry_point('heudiconv', 'console_scripts', 'heudiconv')())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 24, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 406, in workflow
+    add_to_datalad(outdir, study_outdir, msg, bids_options)
+  File "/src/heudiconv/heudiconv/external/dlad.py", line 142, in add_to_datalad
+    assert not ds.repo.dirty
+AssertionError
