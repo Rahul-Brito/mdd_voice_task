@@ -285,6 +285,7 @@ def generate_sparse_scan_regressors(nifti, frame_times, task_json, events):
     sparse_model.inputs.model_hrf = True
     sparse_model.inputs.subject_info = modelgen.bids_gen_info(events,condition_column='trial_type')  # doctest: +SKIP
 
+    #potentially could also tack on the noise regressors too here
     regressors = sparse_model._list_outputs()['session_info'][0]['regress']
     data = [v['val'] for v in regressors]
     col = [t['name'] for t in regressors]
@@ -319,7 +320,9 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type, custom_e
         ### Load CIFTI, smooth, and save
         smoothed_func_signal = smooth_cifti(fmriprep_dir,sub,task,ses,run)
 
-        ##### We are here now
+        ### scale the signal
+        smoothed_func_signal = 10000 * np.divide(smoothed_func_signal - np.min(smoothed_func_signal),
+                                                 np.mean(smoothed_func_signal - np.min(smoothed_func_signal)))
         
         ### Get spare resampled timestamps from volumetric data
         
@@ -350,45 +353,50 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type, custom_e
         #create resampled regressors for each task condition
         if sparse:
             try:
-                # outputs regressors for each task condition. Requires the original nifti file
+                # outputs regressors for each task condition. Convolves with HRF and resamples based on sparse scan timing. 
+                #Requires the original nifti file
                 sparse_scan_regressors = generate_sparse_scan_regressors(nifti, frame_times, task_json, events)
                 fails = None
             except Exception as Arguement:
                 fails = Arguement
             
         #create design matrix with resampled task regressors and confounds
-        selected_confounds.index = sparse_scan_regressors.index
-        design_matrix = pd.concat([sparse_scan_regressors, selected_confounds], axis=1)
+        #key is no HRF model since I already convolved in generate_sparse_scan_regressors
+        #no filtering because of fmriprep regressors
+        #also contactenates fmriprep noise regressors with "add_regs" arguement 
+        design_matrix = make_first_level_design_matrix(frame_times,
+                                                       events=pd.read_table(events[0]),
+                                                       add_regs = selected_confounds,
+                                                       drift_model=None,
+                                                       hrf_model=None,
+                                                       high_pass=None
+                                                       )
+        
+        #replace 1 and 0 from design matrix with resampled task regressors
+        #find the columns in the design matrix that are the same as in the sparse_scan_regressors
+        #which should just correspond to the task conditions
+        #and replace the values
+        col = design_matrix.drop(design_matrix.columns.difference(sparse_scan_regressors.columns), axis=1).columns
+        design_matrix[col] = sparse_scan_regressors
 
         #create the task-specific contrast
         speech_contrasts = create_contrast(design_matrix, task)
+
+        #run the glm, with ar1 noise model
+        labels, estimates = run_glm(smoothed_func_signal, design_matrix.values, noise_model='ar1')
         
-        #did manual first level model 
-        # y = betas*x
-        # y = the smoothed cifti image for this subject task/run
-        # x = the design matrix with the resampled task regressors and the confounds
-        # betas = the betas we fit for each greyordinate
-        
-        
-        ##### MISSING NOISE MODEL???
-        
-        #need to add the intercept column of 1s (called "const" for statsmodel)
-        design_matrix = sm.add_constant(design_matrix)
-        first_level_model = sm.OLS(smoothed_func_signal, design_matrix) 
-        fit_glm = first_level_model.fit()
-        
-        #matrix multiply by the desired contrast for the task, to isolate the 
-        #speech >silent contrast while controlling for the regressors
-        
-        betas = fit_glm.params.T.drop('const', axis=1)#get betas from the model, drop intercept column
-        contrast_map = np.matmul(betas,speech_contrasts)
-        
+        #compute contrast output (nilearn object with effect size, z-stat, etc. for this contrast
+        contrast_output = compute_contrast(labels, estimates, speech_contrasts,
+                                        contrast_type='t')
+
         #return the output type we want
         if return_type == 'effect_size':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_map
+            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_size()
         elif return_type == 'z_score':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = stats.zscore(contrast_map)
+            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.z_score()
+        elif return_type == 'effect_variance':
+            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_variance()
 
     first_level_stats_maps_df = pd.DataFrame(first_level_stats_maps)
-    return fit_glm
-    #return first_level_stats_maps_df 
+
+    return first_level_stats_maps_df
