@@ -27,6 +27,10 @@ import hcp_utils as hcp
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from scipy import stats
+import statsmodels.api as sm
+
 #%matplotlib inline
 #! module load openmind/hcp-workbench/1.2.3
 
@@ -224,7 +228,50 @@ def get_confounds(sub,task,ses,run):
 
     return selected_confounds
 
-def generate_sparse_scan_regressors(nifti, fitted_glm, task_json, events):
+
+def smooth_cifti(fmriprep_dir,sub,task,ses,run):
+    #L-R surface templates
+    left_surface = '/om2/user/jsmentch/data/datalad/templateflow/tpl-fsLR/tpl-fsLR_hemi-L_den-32k_sphere.surf.gii'
+    right_surface = '/om2/user/jsmentch/data/datalad/templateflow/tpl-fsLR/tpl-fsLR_hemi-R_den-32k_sphere.surf.gii'
+    
+    ###Load CIFTI, smooth, and save
+    
+    #fmriprep dir for each subject
+    ses_dir = f'{fmriprep_dir}/sub-{sub}/ses-{ses}'
+
+    # add smoothed and cleaned dir to fmriprep for each sub
+    smoothed_dir = f'{ses_dir}/smoothed'
+    #cleaned_dir = f'{ses_dir}/cleaned'
+
+    #create directories for smoothed and cleaned data
+    os.makedirs(smoothed_dir, exist_ok=True)
+    #os.makedirs(cleaned_dir, exist_ok=True)    
+
+    #get the cifti file
+    func_file = glob.glob(f'{fmriprep_dir}/sub-{sub}/ses-{ses}/func/sub-{sub}*ses-{ses}*task-{task}*run-{run}*fsLR_den-91k_bold.dtseries.nii')[0]                      
+
+    #smoothing cifti files using connectome workbench
+    smooth_output_file = f'{smoothed_dir}/{os.path.basename(func_file)}'
+    wb_command = WBCommand(command='wb_command')
+    
+    # smooth with 4mm FWHM kernel in volume and surface. Note -fwhm flag now
+    wb_command.inputs.args = f'-cifti-smoothing {func_file} 4 4 COLUMN {smooth_output_file} -fwhm -right-surface {right_surface} -left-surface {left_surface}'
+    wb_command.run()
+
+    #load smoothed func data
+    smoothed_func_img = nimg.load_img(smooth_output_file)
+    smoothed_func_signal = smoothed_func_img.get_fdata()
+
+    #give it the right header it seems
+    func_smooth = nib.Cifti2Image(smoothed_func_signal, smoothed_func_img.header)
+
+    #save the file with the right header as the final output
+    smooth_output_file = f'{smoothed_dir}/{os.path.basename(func_file)}'
+    func_smooth.to_filename(smooth_output_file)
+    
+    return smoothed_func_signal
+
+def generate_sparse_scan_regressors(nifti, frame_times, task_json, events):
     
     TR=task_json['RepetitionTime']
     DT=task_json['DelayTime']
@@ -243,25 +290,20 @@ def generate_sparse_scan_regressors(nifti, fitted_glm, task_json, events):
     col = [t['name'] for t in regressors]
     df_regressors = pd.DataFrame(data).T
     df_regressors.columns = col
-    df_regressors.index = fitted_glm.design_matrices_[0].index
+    df_regressors.index = frame_times
     
     return df_regressors
 
-
-def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
+def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type, custom_events = []):
     #base directory for fmriprep output
     fmriprep_dir = '../../derivatives/fmriprep'
 
-    #L-R surface templates
-    left_surface = '/om2/user/jsmentch/data/datalad/templateflow/tpl-fsLR/tpl-fsLR_hemi-L_den-32k_sphere.surf.gii'
-    right_surface = '/om2/user/jsmentch/data/datalad/templateflow/tpl-fsLR/tpl-fsLR_hemi-R_den-32k_sphere.surf.gii'
-
+    
     #query list of subjects and runs
     # subjects = layout.get_subjects()
     # runs = layout.get_runs()
 
     #for PVR in PARSED VALID RUNS of pataka only
-
 
     sparse = True
     space='MNI152NLin6Asym'
@@ -274,92 +316,79 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
         run = int(pvr['run'])
         task = pvr['task']
 
+        ### Load CIFTI, smooth, and save
+        smoothed_func_signal = smooth_cifti(fmriprep_dir,sub,task,ses,run)
 
-        ###Load CIFTI, smooth, and save
-
-        #fmriprep dir for each subject
-        ses_dir = f'{fmriprep_dir}/sub-{sub}/ses-{ses}'
-
-        # add smoothed and cleaned dir to fmriprep for each sub
-        smoothed_dir = f'{ses_dir}/smoothed'
-        #cleaned_dir = f'{ses_dir}/cleaned'
-
-        #create directories for smoothed and cleaned data
-        os.makedirs(smoothed_dir, exist_ok=True)
-        #os.makedirs(cleaned_dir, exist_ok=True)    
-
-        #get the cifti file
-        func_file = glob.glob(f'{fmriprep_dir}/sub-{sub}/ses-{ses}/func/sub-{sub}*ses-{ses}*task-{task}*run-{run}*fsLR_den-91k_bold.dtseries.nii')[0]                      
-
-        #smoothing cifti files using connectome workbench
-        smooth_output_file = f'{smoothed_dir}/{os.path.basename(func_file)}'
-        wb_command = WBCommand(command='wb_command')
-        wb_command.inputs.args = f'-cifti-smoothing {func_file} 4 4 COLUMN {smooth_output_file} -right-surface {right_surface} -left-surface {left_surface}'
-        wb_command.run()
-
-        #load smoothed func data
-        smoothed_func_img = nimg.load_img(smooth_output_file)
-        smoothed_func_signal = smoothed_func_img.get_fdata()
-
-        func_smooth = nib.Cifti2Image(smoothed_func_signal, smoothed_func_img.header)
-
-        smooth_output_file = f'{smoothed_dir}/{os.path.basename(func_file)}'
-        func_smooth.to_filename(smooth_output_file)
-
-
+        ##### We are here now
+        
         ### Get spare resampled timestamps from volumetric data
+        
+        #load task JSON to get TR 
         task_json = open(f"../../task-{task}_bold.json")
         task_json=json.load(task_json)
         TR=task_json['RepetitionTime']
 
+        # Need nifti template for nipype sparse scan convolution for this specific sub/ses/task/run
         nifti = glob.glob(f'../../derivatives/fmriprep/sub-{sub}/ses-{ses}/func/sub-{sub}*task-{task}*run-{run}*{space}*preproc*nii.gz')[0]
-        events = glob.glob(f'/nese/mit/group/sig/om_projects/voice/bids/data/sub-{sub}/ses-{ses}/func/sub-{sub}*task-{task}*run-0{run}*events.tsv')
+        
+        if not custom_events:
+            events = glob.glob(f'/nese/mit/group/sig/om_projects/voice/bids/data/sub-{sub}/ses-{ses}/func/sub-{sub}*task-{task}*run-0{run}*events.tsv')
+        else:
+            events = custom_events
 
+        #get the confounds to regress against for 1st level model
         selected_confounds=get_confounds(sub,task,ses,run)
 
-        glm = FirstLevelModel(t_r=TR, 
-                              noise_model='ar1',
-                              drift_model=None,
-                              standardize=False,
-                              hrf_model='spm',
-                              high_pass=None)
+        #generate frame times for design matrix
+        nscans = smoothed_func_signal.shape[0]
+        start_time = 0 * TR
+        end_time = ((nscans - 1) *TR)
+        frame_times = np.linspace(start_time, end_time, nscans)
+        frame_times
+        
 
-        fitted_glm = glm.fit(nifti, events=events[0], confounds=selected_confounds)
-
+        #create resampled regressors for each task condition
         if sparse:
             try:
-                # the whole point of this is to give me the design matrix 
-                sparse_scan_regressors = generate_sparse_scan_regressors(nifti, fitted_glm, task_json, events)
+                # outputs regressors for each task condition. Requires the original nifti file
+                sparse_scan_regressors = generate_sparse_scan_regressors(nifti, frame_times, task_json, events)
                 fails = None
-                for event_type in sparse_scan_regressors.columns:
-                    fitted_glm.design_matrices_[0][event_type] = sparse_scan_regressors[event_type]
             except Exception as Arguement:
                 fails = Arguement
+            
+        #create design matrix with resampled task regressors and confounds
+        selected_confounds.index = sparse_scan_regressors.index
+        design_matrix = pd.concat([sparse_scan_regressors, selected_confounds], axis=1)
 
-        frame_times = fitted_glm.design_matrices_[0].index
-        design_matrix = make_first_level_design_matrix(frame_times,
-                                                       events=pd.read_table(events[0]),
-                                                       drift_model=None,
-                                                       hrf_model='spm', #set to none (or provide the right input to it). None may not be right, used to use FIR back in the day (would set it to 1)
-                                                       high_pass=None #confirm that this is ok
-                                                       )
-
-
-        selected_confounds.index = design_matrix.index
-        design_matrix = pd.concat([design_matrix, selected_confounds], axis = 1)
-        labels, estimates = run_glm(smoothed_func_signal, design_matrix.values)
-
+        #create the task-specific contrast
         speech_contrasts = create_contrast(design_matrix, task)
-        contrast = compute_contrast(labels, estimates, speech_contrasts,
-                                        contrast_type='t')
+        
+        #did manual first level model 
+        # y = betas*x
+        # y = the smoothed cifti image for this subject task/run
+        # x = the design matrix with the resampled task regressors and the confounds
+        # betas = the betas we fit for each greyordinate
+        
+        
+        ##### MISSING NOISE MODEL???
+        
+        #need to add the intercept column of 1s (called "const" for statsmodel)
+        design_matrix = sm.add_constant(design_matrix)
+        first_level_model = sm.OLS(smoothed_func_signal, design_matrix) 
+        fit_glm = first_level_model.fit()
+        
+        #matrix multiply by the desired contrast for the task, to isolate the 
+        #speech >silent contrast while controlling for the regressors
+        
+        betas = fit_glm.params.T.drop('const', axis=1)#get betas from the model, drop intercept column
+        contrast_map = np.matmul(betas,speech_contrasts)
         
         #return the output type we want
         if return_type == 'effect_size':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast.effect_size()
+            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_map
         elif return_type == 'z_score':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast.z_score()
-        elif first_level_stats_maps == 'effect_variance':
-            sub_level_effect_size[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast.effect_variance()
+            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = stats.zscore(contrast_map)
 
     first_level_stats_maps_df = pd.DataFrame(first_level_stats_maps)
-    return first_level_stats_maps_df
+    return fit_glm
+    #return first_level_stats_maps_df 
