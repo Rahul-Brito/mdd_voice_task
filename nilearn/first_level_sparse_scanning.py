@@ -281,7 +281,7 @@ def generate_sparse_scan_regressors(nifti, frame_times, task_json, events):
     sparse_model.inputs.functional_runs = nifti
     sparse_model.inputs.time_repetition = TR
     sparse_model.inputs.time_acquisition = TR - DT
-    sparse_model.inputs.high_pass_filter_cutoff = 128.
+    #sparse_model.inputs.high_pass_filter_cutoff = 128. #satra said to remove
     sparse_model.inputs.model_hrf = True
     sparse_model.inputs.subject_info = modelgen.bids_gen_info(events,condition_column='trial_type')  # doctest: +SKIP
 
@@ -364,21 +364,28 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type, custom_e
         #key is no HRF model since I already convolved in generate_sparse_scan_regressors
         #no filtering because of fmriprep regressors
         #also contactenates fmriprep noise regressors with "add_regs" arguement 
-        design_matrix = make_first_level_design_matrix(frame_times,
-                                                       events=pd.read_table(events[0]),
-                                                       add_regs = selected_confounds,
-                                                       drift_model=None,
-                                                       hrf_model=None,
-                                                       high_pass=None
-                                                       )
+#         design_matrix = make_first_level_design_matrix(frame_times,
+#                                                        events=pd.read_table(events[0]),
+#                                                        add_regs = selected_confounds,
+#                                                        drift_model=None,
+#                                                        hrf_model=None,
+#                                                        high_pass=None
+#                                                        )
         
         #replace 1 and 0 from design matrix with resampled task regressors
         #find the columns in the design matrix that are the same as in the sparse_scan_regressors
         #which should just correspond to the task conditions
         #and replace the values
-        col = design_matrix.drop(design_matrix.columns.difference(sparse_scan_regressors.columns), axis=1).columns
-        design_matrix[col] = sparse_scan_regressors
+#         col = design_matrix.drop(design_matrix.columns.difference(sparse_scan_regressors.columns), axis=1).columns
+#         design_matrix[col] = sparse_scan_regressors
 
+        #create design matrix with sparse scan regressors, noise regressors, and a column of 1s for the intercept
+        # for contrast, order is still [sparse task regressors, noise regressors, intercept]
+        selected_confounds.index = sparse_scan_regressors.index
+        intercept = pd.Series(np.ones(sparse_scan_regressors.shape[0]), name='intercept',
+                              index=sparse_scan_regressors.index) #col of 1s
+        design_matrix = pd.concat([sparse_scan_regressors, selected_confounds, intercept], axis=1)
+        
         #create the task-specific contrast
         speech_contrasts = create_contrast(design_matrix, task)
 
@@ -398,5 +405,4 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type, custom_e
             first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_variance()
 
     first_level_stats_maps_df = pd.DataFrame(first_level_stats_maps)
-
     return first_level_stats_maps_df
