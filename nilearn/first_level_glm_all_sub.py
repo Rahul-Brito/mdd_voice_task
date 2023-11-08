@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt
 #! module load openmind/hcp-workbench/1.2.3
 
 import first_level_sparse_scanning as flss 
-
+out_dir='../../derivatives/first_level_102523'
 events_path_pattern = f'/nese/mit/group/sig/om_projects/voice/bids/data/sub-voice*/ses-*/func/*events.tsv'
 pop_events = flss.find_populated_events(events_path_pattern)
 count_pop_events = pop_events.groupby('task').populated.value_counts()
@@ -48,5 +48,6 @@ parsed_valid_runs = [r for r in parsed_valid_runs if r not in low_acompcor_to_dr
 tasks_included = ['pataka', 'emosent', 'vowel', 'nwr']
 parsed_valid_runs = [r for r in parsed_valid_runs if any(t == r['task'] for t in tasks_included)]
 
-first_level_stats_maps_df = flss.convolve_sparse_scan_glm_with_cifti(parsed_valid_runs)
-first_level_stats_maps_df.to_pickle('102523_effects_size.pkl')
+flss.convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, out_dir)
+#first_level_stats_maps_df = 
+#first_level_stats_maps_df.to_pickle('102523_effects_size.pkl')

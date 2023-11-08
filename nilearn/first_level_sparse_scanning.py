@@ -34,6 +34,9 @@ import statsmodels.api as sm
 #%matplotlib inline
 #! module load openmind/hcp-workbench/1.2.3
 
+
+
+
 def find_populated_events(events_path_pattern):
 
     #get list of all events file in bids directory (using old location) per task as df
@@ -48,6 +51,140 @@ def find_populated_events(events_path_pattern):
     pop_events['task'] = [parse_file_entities(file)['task'] for file in pop_events.events_file]
 
     return pop_events
+
+
+
+
+
+def return_run_order(fmriprep_dir, tasks_included = ['nwr','pataka', 'emosent', 'vowel'], include_manual=True):
+    #get all sub from fmriprep output
+    subjects = [n.split('sub-')[1] for n in next(os.walk(fmriprep_dir))[1] if 'voice' in n]
+
+    #986 and higher were control subjects so removing those
+    #985 also seems like a control with lots of extra scans
+    ctl_sub = ['voice'+ s for s in np.arange(985,1000).astype('str')]
+    subjects = [s for s in subjects if s not in ctl_sub]
+
+    tasks_included = tasks_included
+    run_order = {}
+    for s in subjects:
+        base = f'/nese/mit/group/sig/om_projects/voice/rawData/{s}'
+        for sd in next(os.walk(base))[1]:
+            if 'behavioral' in os.listdir(base + '/'+ sd):
+                for task in tasks_included:
+                    #need to use sorted() so that glob organizes by the timestamp in the file
+                    psychopy_logs = sorted(glob.glob(f'{base}/{sd}/behavioral/*{task}*.log'))
+                    if s == 'voice980' and task == 'nwr': 
+                        #for some reason the log file for this subject and task used X not R for run
+                        run_numbers = [r.split('_X00')[1].split(f'_{task}')[0] for r in psychopy_logs]
+                    else:
+                        run_numbers = [r.split('_R00')[1].split(f'_{task}')[0] for r in psychopy_logs]
+                    run_order[f'sub-{s}_task-{task}'] = run_numbers
+    
+    ### manual changes based on weird outputs and manual inspection
+    ## change this flag to not include the manual fixes
+    if include_manual:
+
+        #original output says ['1', '1', '2', '2']. Inspecting log files at
+        # ls /nese/mit/group/sig/om_projects/voice/rawData/voiceice844/session001_visit002/behavioral/*pataka*
+        # and comparing to scan.tsv here /om2/scratch/Mon/rfbrito/bids/sub-voice844/ses-1/sub-voice844_ses-1_scans.tsv
+        # shows the order of event files is 1 and 2, and the first two psychopy aren't used
+        run_order['sub-voice844_task-pataka'] = ['1', '2'] 
+
+        run_order['sub-voice854_task-nwr'] = ['1', '2'] #same thing for this situation
+        run_order['sub-voice859_task-emosent'] = ['1', '2'] #if the order is sorted already just drop the redundant ones
+
+        ## this subject had no psychopy file for pataka, so i assume the order is right for the events for the 2 runs
+        run_order['sub-voice860_task-pataka'] = ['1', '2'] 
+        run_order['sub-voice860_task-emosent'] = ['1', '2']
+
+        #blank becaus 884 has multiple behavioral folders
+        #and my code went into session002_visit001/behavioral/ which didn't have pataka log files
+        # even tho the subject did it
+        run_order['sub-voice884_task-pataka'] = ['1', '2'] 
+
+        ## 'sub-voice877_task-pataka' seemed to use the events for run1 for both run1 and run2
+
+        #check e.g. /nese/mit/group/sig/om_projects/voice/rawData/voice889/session002_visit001/behavioral/*nwr*.psydat
+        run_order['sub-voice889_task-nwr'] = ['1', '2', '3']
+
+        #check e.g. /nese/mit/group/sig/om_projects/voice/rawData/voice889/session002_visit001/behavioral/*pataka*.psydat
+        run_order['sub-voice889_task-pataka'] = ['1', '2'] 
+
+        #same for ses1 and ses1
+        run_order['sub-voice893_task-pataka'] = ['1', '2'] 
+
+        #'sub-voice897_task-pataka' seems to use same events for run1 and run 2
+        run_order['sub-voice953_task-pataka'] = ['1', '2'] 
+        
+        #same for ses-1 and ses-2
+        run_order['sub-voice956_task-pataka'] = ['1', '2'] 
+        
+        run_order['sub-voice957_task-pataka'] = ['1', '2'] 
+        
+        #not sure why this came out ['1', '3', '3', '2'] but check 
+        # /nese/mit/group/sig/om_projects/voice/rawData/voice958/session001_visit002/behavioral/*nwr*psydat
+        run_order['sub-voice958_task-nwr'] = ['1', '2', '3']
+        
+        #drop redundant run1
+        run_order['sub-voice962_task-pataka'] = ['1', '2'] 
+        
+        #sub-voice964 had a second session with other tasks but not the main ones
+        run_order['sub-voice964_task-nwr'] = ['1', '2', '3']
+        run_order['sub-voice964_task-pataka'] = ['1', '2']
+        run_order['sub-voice964_task-emosent'] = ['1', '2']
+        run_order['sub-voice964_task-vowel'] = ['1', '2']
+        
+        #extra run 1
+        run_order['sub-voice967_task-pataka'] = ['1', '2']
+        #967 did not do nwr, checked scans.tsv
+        
+        #was a run 1 and run 3 no run 2, unsure what was being modele for run3 so dropping
+        run_order['sub-voice968_task-vowel'] = ['1']
+        
+        #973 did not do nwr or pataka, checked scans.tsv and imaging outputs
+        
+        #975 used conditions/pataka_run1.xlsx for both runs
+        
+        #has run 1 and 2 in session001_visit001/behavioral/*nwr*
+        #has run 2 and 3 in session001_visit002/behavioral/*nwr*
+        #scans.tsv shows heudiconv numbering of run3, 2, 1
+        #checking timestamps and log files, it was just 1, 2, 3 that was done in that order and kept
+        run_order['sub-voice979_task-nwr'] = ['1', '2', '3']
+        
+        #Assuming 979 did pataka in order 1,2. No psychopy file
+        run_order['sub-voice979_task-pataka'] = ['1', '2']
+        
+        #Assuming 980 did pataka in order 1,2. No psychopy file
+        run_order['sub-voice980_task-pataka'] = ['1', '2']
+        
+        #Assuming 981 did pataka in order 1,2. No psychopy file
+        run_order['sub-voice980_task-pataka'] = ['1', '2']
+        
+        #982 did not do nwr
+        #Assuming 982 did pataka and vowel in order 1,2. No psychopy file
+        run_order['sub-voice982_task-pataka'] = ['1', '2']
+        run_order['sub-voice982_task-vowel'] = ['1', '2']
+        
+        #983 did not do nwr
+        #Assuming 983 did pataka in order 1,2. No psychopy file
+        run_order['sub-voice983_task-pataka'] = ['1', '2']
+        
+        #Assuming 983 did pataka in order 1,2. No psychopy file
+        run_order['sub-voice984_task-pataka'] = ['1', '2']
+        
+        #kept in case i bring 985 back
+        #from session001_visit001/behavioral/ which matches the time stamps in the scans.tsv it was 1,2
+        #run_order['sub-voice985_task-pataka'] = ['1', '2']
+        #from session001_visit001/behavioral/ which matches the time stamps in the scans.tsv it was 1,2,3
+        #run_order['sub-voice985_task-nwr'] = ['1', '2', '3']
+        
+        
+    return run_order
+
+
+
+
 
 def create_contrast(design_matrix, task):
     #fmri_img = concat_imgs(nifti)
@@ -138,6 +275,10 @@ def create_contrast(design_matrix, task):
     
     return speech_contrast
 
+
+
+
+
 def find_low_acompcor(parsed_valid_runs):
     low_acompcor_to_drop = []
 
@@ -158,6 +299,10 @@ def find_low_acompcor(parsed_valid_runs):
             low_acompcor_to_drop.append(pvr)
             
     return low_acompcor_to_drop
+
+
+
+
 
 
 def get_confounds(sub,task,ses,run):
@@ -229,6 +374,11 @@ def get_confounds(sub,task,ses,run):
     return selected_confounds
 
 
+
+
+
+
+
 def smooth_cifti(fmriprep_dir,sub,task,ses,run):
     #L-R surface templates
     left_surface = '/om2/user/jsmentch/data/datalad/templateflow/tpl-fsLR/tpl-fsLR_hemi-L_den-32k_sphere.surf.gii'
@@ -240,7 +390,7 @@ def smooth_cifti(fmriprep_dir,sub,task,ses,run):
     ses_dir = f'{fmriprep_dir}/sub-{sub}/ses-{ses}'
 
     # add smoothed and cleaned dir to fmriprep for each sub
-    smoothed_dir = f'{ses_dir}/smoothed'
+    smoothed_dir = f'{ses_dir}/smoothed_110123'
     #cleaned_dir = f'{ses_dir}/cleaned'
 
     #create directories for smoothed and cleaned data
@@ -271,6 +421,10 @@ def smooth_cifti(fmriprep_dir,sub,task,ses,run):
     
     return smoothed_func_signal
 
+
+
+
+
 def generate_sparse_scan_regressors(nifti, frame_times, task_json, events):
     
     TR=task_json['RepetitionTime']
@@ -296,7 +450,46 @@ def generate_sparse_scan_regressors(nifti, frame_times, task_json, events):
     
     return df_regressors
 
-def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
+
+
+
+
+
+def save_cifti(cifti_data, output_type, out_dir, sstr, sample_cifti_file='../../derivatives/fmriprep/sub-voice857/ses-1/smoothed/sub-voice857_ses-1_task-pataka_run-1_space-fsLR_den-91k_bold.dtseries.nii'):
+    #takes 91k np array of parcels and generates cifti object
+    
+    sample_cifti = nimg.load_img(sample_cifti_file)
+    time_axis, brain_model_axis = [sample_cifti.header.get_axis(i) for i in range(sample_cifti.ndim)]
+    z = np.atleast_2d(cifti_data)
+    scalar_axis = nib.cifti2.ScalarAxis([output_type])  # Takes a list of names, one per row
+    new_header = nib.Cifti2Header.from_axes([scalar_axis, brain_model_axis])
+    #z = np.reshape(z, (-1, z.shape[0]))
+    img = nib.Cifti2Image(z, new_header)
+
+    name = f'{out_dir}/{sstr}_space-fsLR_den-91k_contrast-spchsil_{output_type}.dscalar.nii'
+    img.to_filename(name)
+    return name
+
+
+
+
+
+
+def save_first_level_output(contrast_output, out_dir, sstr):    
+    save_cifti(contrast_output.effect_size(), 'effect_size', out_dir, sstr)
+    save_cifti(contrast_output.z_score(), 'z_score', out_dir, sstr)
+    save_cifti(contrast_output.effect_variance(), 'effect_variance', out_dir, sstr)
+          
+    print(f'finished {sstr}')
+    
+    return
+
+    
+    
+    
+    
+
+def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, out_dir):
     #base directory for fmriprep output
     fmriprep_dir = '../../derivatives/fmriprep'
 
@@ -311,12 +504,16 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
     space='MNI152NLin6Asym'
 
     first_level_stats_maps = {}
+    
+    fail_log = []
 
     for pvr in parsed_valid_runs:
         sub = pvr['subject']
         ses = pvr['session']
         run = int(pvr['run'])
         task = pvr['task']
+        
+        print(f'started sub-{sub}_ses-{ses}_task-{task}_rec-unco_run-{run}')
 
         ### Load CIFTI, smooth, and save
         smoothed_func_signal = smooth_cifti(fmriprep_dir,sub,task,ses,run)
@@ -335,12 +532,17 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
         # Need nifti template for nipype sparse scan convolution for this specific sub/ses/task/run
         nifti = glob.glob(f'../../derivatives/fmriprep/sub-{sub}/ses-{ses}/func/sub-{sub}*task-{task}*run-{run}*{space}*preproc*nii.gz')[0]
         
-        events = glob.glob(f'/nese/mit/group/sig/om_projects/voice/bids/data/sub-{sub}/ses-{ses}/func/sub-{sub}*task-{task}*run-0{run}*events.tsv')
+        #fix run order to pull right events file based on faulty dicom to nifti mapping
+        #this uses psychopy log files for each subject/task
+        run_order = return_run_order(fmriprep_dir, tasks_included = ['nwr','pataka', 'emosent', 'vowel'], include_manual=True)
+        run_event = run_order[f'sub-{sub}_task-{task}'][run-1]
+        events = glob.glob(f'/nese/mit/group/sig/om_projects/voice/bids/data/sub-{sub}/ses-{ses}/func/sub-{sub}*task-{task}*run-0{run_event}*events.tsv')
         
 
         #get the confounds to regress against for 1st level model
-        selected_confounds=get_confounds(sub,task,ses,run)
 
+        selected_confounds=get_confounds(sub,task,ses,run)
+            
         #generate frame times for design matrix
         nscans = smoothed_func_signal.shape[0]
         start_time = 0 * TR
@@ -348,7 +550,6 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
         frame_times = np.linspace(start_time, end_time, nscans)
         frame_times
         
-
         #create resampled regressors for each task condition
         try:
             # outputs regressors for each task condition. Convolves with HRF and resamples based on sparse scan timing. 
@@ -357,6 +558,8 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
             fails = None
         except Exception as Arguement:
             fails = Arguement
+            fail_log.append(pvr)
+            continue
 
         #create design matrix with sparse scan regressors, noise regressors, and a column of 1s for the intercept
         #1for contrast, order is still [sparse task regressors, noise regressors, intercept]
@@ -369,19 +572,26 @@ def convolve_sparse_scan_glm_with_cifti(parsed_valid_runs, return_type):
         speech_contrasts = create_contrast(design_matrix, task)
 
         #run the glm, with ar1 noise model
-        labels, estimates = run_glm(smoothed_func_signal, design_matrix.values, noise_model='ar1')
+        labels, estimates = run_glm(smoothed_func_signal, design_matrix.values, noise_model='ar1', n_jobs=-2)
         
         #compute contrast output (nilearn object with effect size, z-stat, etc. for this contrast
         contrast_output = compute_contrast(labels, estimates, speech_contrasts,
                                         contrast_type='t')
+        
+        #save cifti file for effect size, z-score, and effect variance for each subject/session/task/run
+        save_first_level_output(contrast_output, out_dir, f'sub-{sub}_ses-{ses}_task-{task}_rec-unco_run-{run}')
 
         #return the output type we want
-        if return_type == 'effect_size':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_size()
-        elif return_type == 'z_score':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.z_score()
-        elif return_type == 'effect_variance':
-            first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_variance()
+#         if return_type == 'effect_size':
+#             first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_size()
+#         elif return_type == 'z_score':
+#             first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.z_score()
+#         elif return_type == 'effect_variance':
+#             first_level_stats_maps[f'sub-{sub}_ses-{ses}_task-{task}_run-{run}'] = contrast_output.effect_variance()
 
-    first_level_stats_maps_df = pd.DataFrame(first_level_stats_maps)
-    return first_level_stats_maps_df
+#     first_level_stats_maps_df = pd.DataFrame(first_level_stats_maps)
+    with open(f'{out_dir}/fails.txt', 'w') as f:
+        for line in fail_log:
+            f.write(f"{line}\n")
+    return 
+
