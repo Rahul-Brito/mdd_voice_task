@@ -49,4 +49,16 @@ def save_cifti(cifti_data, output_type, out_dir, sstr, contrast = 'spchsil', sam
 
     name = f'{out_dir}/{sstr}_space-fsLR_den-91k_contrast-{contrast}_{output_type}.dscalar.nii'
     img.to_filename(name)
+    
+    return name
+    
+def volume_from_cifti(data, axis):
+    assert isinstance(axis, nib.cifti2.BrainModelAxis)
+    data = data.T[axis.volume_mask]                          # Assume brainmodels axis is last, move it to front
+    volmask = axis.volume_mask                               # Which indices on this axis are for voxels?
+    vox_indices = tuple(axis.voxel[axis.volume_mask].T)      # ([x0, x1, ...], [y0, ...], [z0, ...])
+    vol_data = np.zeros(axis.volume_shape + data.shape[1:],  # Volume + any extra dimensions
+                        dtype=data.dtype)
+    vol_data[vox_indices] = data                             # "Fancy indexing"
+    return nib.Nifti1Image(vol_data, axis.affine)             # Add affine for spatial interpretation
 
