@@ -69,8 +69,9 @@ def load_phenotypic_data(filename, demean):
 
 
 
-def create_task_design_matrix(second_level_effects, pheno):
+def create_task_design_matrix(second_level_effects, pheno, test_type):
     
+
     task_design_matrix = {}
     for task, fx in second_level_effects.items():
         pheno_per_ses = []
@@ -87,7 +88,20 @@ def create_task_design_matrix(second_level_effects, pheno):
         design_matrix = design_matrix.drop('voice_id', axis=1)
         design_matrix['intercept'] = np.ones(design_matrix.shape[0])
         #design_matrix = design_matrix[covariate_list]
-        task_design_matrix[task] = design_matrix
+        if test_type == 't':
+            task_design_matrix = task_design_matrix
+        elif test_type == 'F':
+            contrast_list = np.unique([fx.split('contrast-')[1].split('_effect_size')[0] 
+                                   for task, files in second_level_effects.items() for fx in files])
+            
+            f_regressors = pd.DataFrame.from_dict(second_level_effects)
+            for con in contrast_list:
+                f_regressors[con] = f_regressors.emosent.str.contains(con).astype('int')
+            f_regressors = f_regressors.drop(task, axis=1)
+            f_regressors.index = design_matrix.index
+            design_matrix = pd.concat([f_regressors, design_matrix], axis=1)
+    task_design_matrix[task] = design_matrix     
+    
     return task_design_matrix
 
 
@@ -106,42 +120,53 @@ def create_group_contrast(design_matrix, covariate):
 
 
 
-def fit_group_model(effect_size_signals_combined, task_design_matrix):
+def fit_group_model(effect_size_signals_combined, task_design_matrix, bdi):
     model_out={}
 
     #for sc, cov_design_matrix in sub_cov_design_matrix.items():
     #fx_sig = effect_size_signals_combined[sc]
+    
+    if bdi:
+        groups = ['mdd','all_sub'] #mdd, all subjects
 
-    groups = ['mdd','all_sub'] #mdd, all subjects
+        for task,betas in effect_size_signals_combined.items():
+            #dm = task_design_matrix[task]
+            #pd.concat([cov_design_matrix['bdi'], regressors[condition]], axis=1) #add covariates
 
-    for task,betas in effect_size_signals_combined.items():
-        #dm = task_design_matrix[task]
-        #pd.concat([cov_design_matrix['bdi'], regressors[condition]], axis=1) #add covariates
+            #get design matrix either for just subjects above BDI cutoff or all subjects
+            contrast_out = {}
+            for grp in groups:
+                if grp == 'mdd':
+                    design_matrix = task_design_matrix[task][task_design_matrix[task].mdd == grp].drop('mdd', axis=1)
 
-        #get design matrix either for just subjects above BDI cutoff or all subjects
-        contrast_out = {}
-        for grp in groups:
-            if grp == 'mdd':
-                design_matrix = task_design_matrix[task][task_design_matrix[task].mdd == grp].drop('mdd', axis=1)
-                
-                betas_mdd =  betas[betas.index.isin(design_matrix.index)]
+                    betas_mdd =  betas[betas.index.isin(design_matrix.index)]
 
-                labels, estimates = run_glm(betas_mdd.values, design_matrix.values, noise_model='ols', 
-                                        n_jobs=-2, verbose=0)
+                    labels, estimates = run_glm(betas_mdd.values, design_matrix.values, noise_model='ols', 
+                                            n_jobs=-2, verbose=0)
 
-                #look at specific contrast
-                cov = 'beckdepressionii_total'
-                contrast = create_group_contrast(design_matrix, cov)
-                contrast_out[grp] = compute_contrast(labels, estimates, contrast)
-            else:
-                design_matrix = task_design_matrix[task].drop('mdd', axis=1)
+                    #look at specific contrast
+                    cov = 'beckdepressionii_total'
+                    contrast = create_group_contrast(design_matrix, cov)
+                    contrast_out[grp] = compute_contrast(labels, estimates, contrast)
+                else:
+                    design_matrix = task_design_matrix[task].drop('mdd', axis=1)
 
-                labels, estimates = run_glm(betas.values, design_matrix.values, noise_model='ols', 
-                                        n_jobs=-2, verbose=0)
+                    labels, estimates = run_glm(betas.values, design_matrix.values, noise_model='ols', 
+                                            n_jobs=-2, verbose=0)
 
-                #look at specific contrast
-                cov = 'beckdepressionii_total'
-                contrast = group_level_model.create_group_contrast(design_matrix, cov)
-                contrast_out[grp] = compute_contrast(labels, estimates, contrast)
-        model_out[task] = contrast_out
+                    #look at specific contrast
+                    cov = 'beckdepressionii_total'
+                    contrast = create_group_contrast(design_matrix, cov)
+                    contrast_out[grp] = compute_contrast(labels, estimates, contrast)
+            model_out[task] = contrast_out
+    else:
+        for task,betas in effect_size_signals_combined.items():
+            design_matrix = task_design_matrix[task]
+            labels, estimates = run_glm(betas.values, design_matrix.values, noise_model='ols', 
+                                            n_jobs=-2, verbose=0)
+            cov = 'intercept'
+            contrast = create_group_contrast(design_matrix, cov)
+            contrast_out = compute_contrast(labels, estimates, contrast)
+    model_out[task] = contrast_out
+            
     return model_out
